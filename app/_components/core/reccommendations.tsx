@@ -33,10 +33,14 @@ const reccommendations: ReccommendationI[] = [
 
 const Reccommendations = () => {
   return (
-    <section className='space-y-10 font-sans' id='Recommendations' data-section>
-      {reccommendations.map((item) => (
-        <RecommendationItem key={item.id} recc={item} />
-      ))}
+    <section className='font-sans relative' id='Recommendations' data-section>
+      <h1 className='section-title '>Testimonials</h1>
+
+      <section className='section-spacing'>
+        {reccommendations.map((item) => (
+          <RecommendationItem key={item.id} recc={item} />
+        ))}
+      </section>
     </section>
   );
 };

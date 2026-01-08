@@ -59,10 +59,13 @@ const experiences: ExperienceI[] = [
 
 const Experience = () => {
   return (
-    <section className='space-y-10 font-sans' id='Experience' data-section>
-      {experiences.map((item) => (
-        <ExperienceItem key={item.id} experience={item} />
-      ))}
+    <section className='font-sans relative' id='Experience' data-section>
+      <h1 className='section-title'>Experience</h1>
+      <section className='section-spacing'>
+        {experiences.map((item) => (
+          <ExperienceItem key={item.id} experience={item} />
+        ))}
+      </section>
     </section>
   );
 };

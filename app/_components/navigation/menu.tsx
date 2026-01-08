@@ -17,7 +17,8 @@ const Menu = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const id = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(id);
   }, []);
 
   useEffect(() => {
@@ -42,8 +43,6 @@ const Menu = () => {
 
     return () => observer.disconnect();
   }, []);
-
-  console.log(activeSection === 'Projects');
 
   if (!mounted) return null;
   return (

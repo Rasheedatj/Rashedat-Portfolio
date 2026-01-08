@@ -26,10 +26,14 @@ const blogs: BlogI[] = [
 ];
 const Blogs = () => {
   return (
-    <section className='space-y-10' id='Blogs' data-section>
-      {blogs.map((blog) => (
-        <BlogItem key={blog.id} blog={blog} />
-      ))}
+    <section className='relative' id='Blogs' data-section>
+      <h1 className='section-title '>Blogs</h1>
+
+      <section className='section-spacing'>
+        {blogs.map((blog) => (
+          <BlogItem key={blog.id} blog={blog} />
+        ))}
+      </section>
     </section>
   );
 };

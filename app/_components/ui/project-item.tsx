@@ -8,8 +8,13 @@ const ProjectItem = ({ project }: { project: ProjectI }) => {
   return (
     <div className='flex flex-col-reverse md:flex-row gap-10 relative font-sans group hover:bg-white/4 border border-none hover:border-text-slate-100 px-6 py-4 rounded-md'>
       <a href={link} className='absolute inset-0'></a>
-      <div className='w-1/2 md:w-[40%] h-25 relative bg-red-800'>
-        <Image src={image} alt={title} fill className='aspect-square' />
+      <div className='w-1/2 md:w-[40%] h-25 relative'>
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className='aspect-square rounded border-slate-200/30 border-2'
+        />
       </div>
 
       <article className='w-full'>

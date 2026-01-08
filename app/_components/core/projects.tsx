@@ -58,10 +58,14 @@ const projects: ProjectI[] = [
 ];
 const Projects = () => {
   return (
-    <section className='space-y-10' id='Projects' data-section>
-      {projects.map((project) => (
-        <ProjectItem key={project.id} project={project} />
-      ))}
+    <section className='relative' id='Projects' data-section>
+      <h1 className='section-title '>Projects</h1>
+
+      <section className='section-spacing'>
+        {projects.map((project) => (
+          <ProjectItem key={project.id} project={project} />
+        ))}
+      </section>
     </section>
   );
 };
