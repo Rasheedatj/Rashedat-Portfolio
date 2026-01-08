@@ -5,7 +5,7 @@ import { ImArrowUpRight2 } from 'react-icons/im';
 const BlogItem = ({ blog }: { blog: BlogI }) => {
   const { title, image, link, date } = blog;
   return (
-    <div className='flex flex-col-reverse md:flex-row relative md:items-center gap-5 group font-sans hover:bg-white/4 border border-none hover:border-text-slate-100 px-6 py-4 rounded-md'>
+    <div className='flex flex-col-reverse lg:flex-row relative lg:items-center gap-5 group font-sans hover:bg-white/4 border border-none hover:border-text-slate-100 px-6 py-4 rounded-md'>
       <a href={link} className='absolute inset-0'></a>
       <div className='w-1/2 md:w-[40%] h-25 relative'>
         <Image

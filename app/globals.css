@@ -17,13 +17,6 @@
   --shadow-2xl: 5px 5px 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 10rem;
@@ -51,7 +44,7 @@ body {
   }
 
   .section-title {
-    @apply text-white font-semibold tracking-widest z-10 uppercase px-6 bg-background py-4 sticky top-0  lg:sr-only;
+    @apply text-white font-semibold tracking-widest z-10 uppercase px-6 bg-background py-4 sticky top-0  md:sr-only;
   }
 
   .section-spacing {
@@ -61,11 +54,4 @@ body {
   .contact {
     @apply text-slate-400 hover:text-accent hover:-translate-y-0.5 duration-300 ease-in-out transition-all;
   }
-
-  .active {
-    /* @apply hover:bg-white/4 border border-none hover:border-text-slate-100 px-5 py-3; */
-  }
-}
-.resume:hover {
-  box-shadow: 5px 5px 0 #fcdb56;
 }

@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={`scroll-smooth scroll-pt-10 ${roboto.variable}`}>
-      <body className='flex flex-col md:flex-row justify-between md:max-w-4/5 mx-auto font-sans  scroll-smooth scroll-pt-10'>
+      <body className='flex flex-col md:flex-row justify-between md:max-w-11/12  lg:max-w-4/5 mx-auto font-sans  scroll-smooth scroll-pt-10'>
         {children}
       </body>
     </html>

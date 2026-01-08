@@ -5,7 +5,7 @@ const About = () => {
     <section className='font-sans relative' id='About' data-section>
       <h1 className='section-title'>About</h1>
 
-      <article className='px-6 space-y-5 text-slate-400 *:leading-7 pt-4'>
+      <article className='px-6 space-y-5 text-slate-400 *:leading-7 pt-4 md:pt-0'>
         <p>
           Startup products are delicate. Without a developer who understands
           both <span className='bold'>technology</span> and{' '}
@@ -34,7 +34,7 @@ const About = () => {
         </p>
       </article>
 
-      <button className='relative ml-6 mt-8 px-4 py-2 border-accent border text-accent  rounded-sm hover:-translate-x-2 hover:-translate-y-2 duration-300 transition-all hover:shadow-accent hover:shadow-2xl'>
+      <button className='relative ml-6 mt-8 px-4 py-2 border-accent border-2 font-medium text-accent rounded-md hover:-translate-x-2 hover:-translate-y-2 duration-300 transition-all hover:shadow-accent hover:shadow-2xl'>
         <a
           href='https://calendly.com/jinaduikeoluwa/let-s-talk-about-your-application'
           className='absolute inset-0'

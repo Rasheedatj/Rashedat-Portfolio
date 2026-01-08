@@ -39,7 +39,7 @@ const contacts = [
 
 const Contacts = () => {
   return (
-    <div className='flex items-center gap-4'>
+    <div className='flex items-center gap-4 mt-6 lg:mt-0'>
       {contacts.map((contact) => {
         return (
           <a

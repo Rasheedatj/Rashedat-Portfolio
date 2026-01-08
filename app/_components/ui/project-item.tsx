@@ -6,7 +6,7 @@ import { ImArrowUpRight2 } from 'react-icons/im';
 const ProjectItem = ({ project }: { project: ProjectI }) => {
   const { title, image, description, link, tools } = project;
   return (
-    <div className='flex flex-col-reverse md:flex-row gap-10 relative font-sans group hover:bg-white/4 border border-none hover:border-text-slate-100 px-6 py-4 rounded-md'>
+    <div className='flex flex-col-reverse lg:flex-row gap-10 relative font-sans group hover:bg-white/4 border border-none hover:border-text-slate-100 px-6 py-4 rounded-md'>
       <a href={link} className='absolute inset-0'></a>
       <div className='w-1/2 md:w-[40%] h-25 relative'>
         <Image

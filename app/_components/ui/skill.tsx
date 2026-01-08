@@ -2,7 +2,7 @@ import React from 'react';
 
 const Skill = ({ skills }: { skills: string[] }) => {
   return (
-    <div className='flex items-center gap-4 mt-5 flex-wrap'>
+    <div className='flex items-center gap-2 mt-5 flex-wrap'>
       {skills.map((skill) => (
         <p
           key={skill}

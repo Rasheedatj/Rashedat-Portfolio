@@ -7,7 +7,7 @@ import Reccommendations from './core/reccommendations';
 
 const Core = () => {
   return (
-    <section className='md:w-1/2 py-20 space-y-20 md:overflow-scroll scrollbar-hidden h-screen   '>
+    <section className='md:w-1/2 py-10 lg:py-20 space-y-20 md:overflow-scroll scrollbar-hidden h-screen'>
       <About />
       <Experience />
       <Projects />
