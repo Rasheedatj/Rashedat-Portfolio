@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #121d52;
+  --foreground: #e5e7eb;
+  --accent: #22d3ee;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-roboto), 'monospace';
+}
+
+@theme {
+  --color-accent: #22d3ee;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clip {
+  clip-path: polygon(60% 0, 13% 0, 36% 46%);
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .bold {
+    @apply text-slate-100 font-medium;
+  }
+}
+
+/* @layer components {
+  .active {
+    @apply hover:bg-white/4 border border-none hover:border-text-slate-100 px-5 py-3;
+  }
+} */
