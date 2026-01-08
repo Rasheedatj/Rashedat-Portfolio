@@ -22,16 +22,6 @@ html {
   scroll-padding-top: 10rem;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.clip {
-  clip-path: polygon(60% 0, 13% 0, 36% 46%);
-}
-
 @utility scrollbar-hidden {
   &::-webkit-scrollbar {
     display: none;
@@ -54,4 +44,13 @@ body {
   .contact {
     @apply text-slate-400 hover:text-accent hover:-translate-y-0.5 duration-300 ease-in-out transition-all;
   }
+}
+
+.glow-cursor {
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.251),
+    rgba(99, 102, 241, 0.149),
+    transparent 90%
+  );
 }
