@@ -27,7 +27,7 @@ const contacts = [
     id: 'c4',
     title: 'Email',
     icon: <MdOutlineEmail size={24} className='contact' />,
-    link: 'https://mail.google.com/jinaduikeoluwa@gmail.com',
+    link: 'mailto:https://mail.google.com/jinaduikeoluwa@gmail.com',
   },
   {
     id: 'c5',

@@ -44,7 +44,7 @@ export default function GlowCursor() {
   return (
     <div
       ref={glowRef}
-      className='fixed top-0 left-0 w-150 h-150 pointer-none rounded-full blur-3xl z-0 glow-cursor'
+      className='hidden lg:block fixed top-0 left-0 w-150 h-150 pointer-none rounded-full blur-3xl z-0 isolate glow-cursor'
     />
   );
 }

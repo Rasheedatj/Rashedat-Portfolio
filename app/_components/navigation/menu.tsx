@@ -49,7 +49,7 @@ const Menu = () => {
     <ul className='space-y-6 mt-14 hidden md:block'>
       {menu.map((item) => {
         return (
-          <li key={item} className='group max-w-fit'>
+          <li key={item} className='group max-w-fit z-10 relative'>
             <a className='flex items-center gap-4' href={`#${item}`}>
               <span
                 className={`w-10  group-hover:h-0.5 group-hover:w-16  group-hover:bg-slate-200 rounded-xs block transition-all duration-100 ease-in ${

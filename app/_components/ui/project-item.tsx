@@ -7,13 +7,13 @@ const ProjectItem = ({ project }: { project: ProjectI }) => {
   const { title, image, description, link, tools } = project;
   return (
     <div className='flex flex-col-reverse lg:flex-row gap-10 relative font-sans group hover:bg-white/4 border border-none hover:border-text-slate-100 px-6 py-4 rounded-md'>
-      <a href={link} className='absolute inset-0'></a>
-      <div className='w-1/2 md:w-[40%] h-25 relative'>
+      <a href={link} className='absolute inset-0 z-10'></a>
+      <div className='w-full h-32 md:w-[40%] md:h-25 relative'>
         <Image
           src={image}
           alt={title}
           fill
-          className='aspect-square rounded border-slate-200/30 border-2'
+          className='aspect-square object-cover rounded border-slate-200/30 border-2'
         />
       </div>
 
