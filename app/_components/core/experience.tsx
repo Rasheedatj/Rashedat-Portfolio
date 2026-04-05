@@ -6,9 +6,24 @@ export interface ExperienceI {
   company: string;
   responsibilities: string[];
   tools: string[];
+  logo: string;
 }
 
 const experiences: ExperienceI[] = [
+  {
+    id: 'E4',
+    title: 'Mobile Application Developer',
+    company: 'Koyo',
+    responsibilities: [
+      'Developed an iOS and android application from a single codebase',
+      'Converted Figma designs into screens that adapt to different devices',
+      'Integrated native features such as audio, image upload and device storage',
+      'Integrated restful API with mobile application',
+      'Participated in deployment to Testflight and App store',
+    ],
+    tools: ['React Native', 'Testflight', 'Deployment'],
+    logo: '/koyo.png',
+  },
   {
     id: 'E1',
     title: 'Intermediate Frontend Developer',
@@ -29,6 +44,7 @@ const experiences: ExperienceI[] = [
       'Typescript',
       'Shadcn UI',
     ],
+    logo: '/open-desk.png',
   },
   {
     id: 'E2',
@@ -41,19 +57,21 @@ const experiences: ExperienceI[] = [
       'Built modular and reusable components used across different projects',
     ],
     tools: ['Next.js', 'React.js', 'Tailwind.CSS', 'Zustand', 'Typescript'],
+    logo: '/remita.png',
   },
   {
     id: 'E3',
     title: 'Frontend Developer',
-    company: 'NotchHr',
+    company: 'ATB Tech',
     responsibilities: [
-      '  Implemented multiple job and skills upload on a human resource software',
+      'Implemented multiple job and skills upload on a human resource software',
       'Redesigned the company website, giving it a more modern look that retains users',
       'Collaborated with backend engineers, product designers, and project managers to ship new features',
       'Mentored junior frontend developers on the coding methodologies of the company',
       'Handled remote state management using React Query',
     ],
     tools: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'React.js'],
+    logo: '/atb.png',
   },
 ];
 
