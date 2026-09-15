@@ -3,7 +3,7 @@ import './globals.css';
 import { Poppins } from 'next/font/google';
 
 export const metadata: Metadata = {
-  title: 'Rashedat Jinadu Portfolio',
+  title: 'Rashedat Jinadu | Mobile App Developer',
   description: 'A frontend web and mobile application developer',
 };
 

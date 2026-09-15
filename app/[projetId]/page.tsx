@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Stack = () => {
+const Page = () => {
   return <div></div>;
 };
 
-export default Stack;
+export default Page;
