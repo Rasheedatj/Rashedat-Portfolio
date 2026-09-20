@@ -26,7 +26,7 @@ const ButtonLink = ({
     <Link
       href={href}
       {...(download && { download: true })}
-      className={`relative inline-flex h-8.25 items-center gap-2 rounded-2xl px-4 font-display text-[15px] md:h-11 md:px-5.5 md:text-lg ${variants[variant]}`}
+      className={`relative inline-flex h-8.25 items-center gap-2 rounded-lg md:rounded-2xl px-4 font-display text-[15px] md:h-11 md:px-5.5 md:text-lg ${variants[variant]}`}
     >
       {children}
       {taped && <Tape />}

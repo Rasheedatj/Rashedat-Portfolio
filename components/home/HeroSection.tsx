@@ -4,7 +4,7 @@ import Container from '@/components/ui/Container';
 
 const HeroSection = () => {
   return (
-    <section className='pt-6'>
+    <section className='pt-6 '>
       <Container className='grid gap-10 md:grid-cols-[30rem_1fr] md:items-center md:gap-14'>
         <div className='order-2 md:order-1'>
           <HeroPortrait />

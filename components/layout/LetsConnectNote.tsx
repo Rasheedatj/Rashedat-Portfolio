@@ -1,14 +1,28 @@
-import Image from 'next/image';
+type LetsConnectNoteProps = {
+  color?: string;
+  className?: string;
+};
 
-const LetsConnectNote = () => {
+const noteMask = "url('/lets-connect.svg')";
+
+/** The note artwork is a raster, so it is tinted by using it as a mask. */
+const LetsConnectNote = ({
+  color = '#A7002C',
+  className = '',
+}: LetsConnectNoteProps) => {
   return (
-    <Image
-      src='/lets-connect.svg'
-      alt=''
-      width={115}
-      height={86}
+    <span
       aria-hidden='true'
-      className='pointer-events-none absolute -top-28 -left-10 hidden max-w-none md:block'
+      className={`pointer-events-none block h-21.5 w-28.75 max-w-none ${className}`}
+      style={{
+        backgroundColor: color,
+        maskImage: noteMask,
+        WebkitMaskImage: noteMask,
+        maskRepeat: 'no-repeat',
+        WebkitMaskRepeat: 'no-repeat',
+        maskSize: '100% 100%',
+        WebkitMaskSize: '100% 100%',
+      }}
     />
   );
 };

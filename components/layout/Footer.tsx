@@ -17,7 +17,7 @@ const Footer = () => {
           </article>
           <NavLinks label='Footer' />
           <div className='relative'>
-            <LetsConnectNote />
+            <LetsConnectNote className='absolute -top-28 -left-10 hidden md:block' />
             <SocialLinks />
           </div>
         </section>

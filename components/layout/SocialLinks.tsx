@@ -1,15 +1,11 @@
-import Image from 'next/image';
+import SocialIcon from '@/components/ui/SocialIcon';
 import { socialLinks } from '@/data/site';
-import type { SocialPlatform } from '@/types/site';
 
-const icons: Record<SocialPlatform, string> = {
-  github: '/github.svg',
-  linkedin: '/linkedin.svg',
-  x: '/x.svg',
-  email: '/mail.svg',
+type SocialLinksProps = {
+  color?: string;
 };
 
-const SocialLinks = () => {
+const SocialLinks = ({ color }: SocialLinksProps) => {
   return (
     <ul aria-label='Social links' className='flex items-center gap-6'>
       {socialLinks.map((link) => {
@@ -25,13 +21,7 @@ const SocialLinks = () => {
                 rel: 'noopener noreferrer',
               })}
             >
-              <Image
-                src={icons[link.platform]}
-                alt=''
-                width={24}
-                height={24}
-                aria-hidden='true'
-              />
+              <SocialIcon platform={link.platform} color={color} />
             </a>
           </li>
         );
