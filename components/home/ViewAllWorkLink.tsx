@@ -1,5 +1,67 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 const ViewAllWorkLink = () => {
-  return <div></div>;
+  return (
+    <div className='flex justify-center'>
+      <Link
+        href='/work-gallery'
+        className='inline-flex items-center gap-2.5 font-display text-base font-medium text-espresso lg:gap-3 lg:text-[45px]'
+      >
+        <span className='relative'>
+          View All Work
+          {/* <svg
+            viewBox='0 0 178 17'
+            preserveAspectRatio='none'
+            aria-hidden='true'
+            className='pointer-events-none absolute top-full left-0 -mt-1 h-2 w-[86%] lg:-mt-2.5 lg:h-3.5'
+          >
+            <path
+              d='M3.25 3.25C3.277 3.25 3.304 3.25 28.796 5.159C54.289 7.067 105.246 10.883 133.508 12.293C161.771 13.702 165.795 12.589 168.527 11.681C171.26 10.774 172.58 10.105 173.341 9.384C174.103 8.663 174.266 7.91 174.351 6.93C174.435 5.95 174.435 4.766 174.435 3.546'
+              fill='none'
+              stroke='#F7C948'
+              strokeWidth='4'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              vectorEffect='non-scaling-stroke'
+            />
+          </svg> */}
+          <Image
+            src='single-downward-yellow-stroke.svg'
+            alt=''
+            width={265}
+            height={17}
+            aria-hidden='true'
+            className='pointer-events-none absolute top-full left-0 -mt-1 h-2  lg:-mt-2.5 lg:h-3.5'
+          />
+          <Image
+            src='/yellow-tape.svg'
+            alt=''
+            width={47}
+            height={60}
+            aria-hidden='true'
+            className='pointer-events-none absolute -top-2 -left-3.5 h-auto w-5 max-w-none lg:-top-7 lg:-left-11 lg:w-17.5'
+          />
+          <Image
+            src='/yellow-tape.svg'
+            alt=''
+            width={47}
+            height={60}
+            aria-hidden='true'
+            className='pointer-events-none absolute -right-1 -bottom-3 h-auto w-5 max-w-none lg:right-6.5 lg:-bottom-7 lg:w-17.5'
+          />
+        </span>
+        <Image
+          src='/arrow-next.svg'
+          alt=''
+          width={57}
+          height={16}
+          aria-hidden='true'
+          className='w-5.75 max-w-none lg:w-13.5'
+        />
+      </Link>
+    </div>
+  );
 };
 
 export default ViewAllWorkLink;

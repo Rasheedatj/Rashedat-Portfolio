@@ -1,7 +1,5 @@
 import type { Project } from '@/types/project';
 
-const emptyImages: Project['images'] = { screens: [] };
-
 export const projects: Project[] = [
   {
     slug: 'eatly',
@@ -9,13 +7,18 @@ export const projects: Project[] = [
     category: 'mobile',
     headline: 'Eatly - Bringing More Fun to Food Delivery.',
     summary:
-      'Designing a food delivery experience that feels as satisfying as the meal itself.',
+      'Developed a food delivery experience that feels as satisfying as the meal itself.',
     role: 'Mobile Engineer',
     featured: true,
     annotation: 'Food delivery can be fun too!',
     links: {},
     techStack: ['react-native', 'expo', 'typescript'],
-    images: emptyImages,
+    images: {
+      featured: '/eatly-featured.avif',
+      slideShow: [''],
+      preview: '',
+      annotationArt: '/eatly-arrow.svg',
+    },
     caseStudy: [],
   },
   {
@@ -24,13 +27,18 @@ export const projects: Project[] = [
     category: 'mobile',
     headline: 'Koyo - Making Nigerian Languages Easier to Learn.',
     summary:
-      'Building a language learning app that makes Nigerian languages easier to understand, remember, and use in everyday life.',
+      'Built a language learning app that makes Nigerian languages easier to understand, remember, and use in everyday life.',
     role: 'Mobile Engineer',
     featured: true,
     annotation: 'African culture is beautiful',
     links: {},
     techStack: ['react-native', 'expo', 'typescript'],
-    images: emptyImages,
+    images: {
+      featured: '/koyo-featured.avif',
+      slideShow: [''],
+      preview: '',
+      annotationArt: '/koyo-arrow.svg',
+    },
     caseStudy: [],
   },
   {
@@ -39,13 +47,18 @@ export const projects: Project[] = [
     category: 'mobile',
     headline: 'Robo - Learning to Code Made Simple.',
     summary:
-      'Building a learning app that helps beginners understand programming languages through simple, practical lessons.',
+      'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
     role: 'Mobile Engineer',
     featured: true,
     annotation: 'Hard things can be made really easy to learn',
     links: {},
     techStack: ['react-native', 'expo', 'typescript'],
-    images: emptyImages,
+    images: {
+      featured: '/robo-featured.avif',
+      slideShow: [''],
+      preview: '',
+      annotationArt: '/robo-arrow.svg',
+    },
     caseStudy: [],
   },
   {
@@ -58,7 +71,11 @@ export const projects: Project[] = [
     featured: false,
     links: {},
     techStack: ['react-native', 'expo', 'typescript'],
-    images: emptyImages,
+    images: {
+      featured: '/jacko-featured.avif',
+      slideShow: [''],
+      preview: '',
+    },
     caseStudy: [],
   },
   {
@@ -71,7 +88,11 @@ export const projects: Project[] = [
     featured: false,
     links: {},
     techStack: ['react-native', 'expo', 'typescript'],
-    images: emptyImages,
+    images: {
+      featured: '/cartwise-featured.avif',
+      slideShow: [''],
+      preview: '',
+    },
     caseStudy: [],
   },
   {
@@ -85,7 +106,12 @@ export const projects: Project[] = [
     annotation: 'Your website should be as fun as your mobile app',
     links: {},
     techStack: ['react', 'nextjs', 'typescript', 'tailwindcss'],
-    images: emptyImages,
+    images: {
+      featured: '/eatly-website-featured.avif',
+      slideShow: [''],
+      preview: '',
+      annotationArt: '/eatly-website-arrow.svg',
+    },
     caseStudy: [],
   },
   {
@@ -99,7 +125,12 @@ export const projects: Project[] = [
     annotation: 'A specialist ghostwriting and content studio',
     links: {},
     techStack: ['react', 'nextjs', 'typescript', 'tailwindcss'],
-    images: emptyImages,
+    images: {
+      featured: '/legacy-featured.avif',
+      slideShow: [''],
+      preview: '',
+      annotationArt: '/legacy-ink-arrow.svg',
+    },
     caseStudy: [],
   },
 ];

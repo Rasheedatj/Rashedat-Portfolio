@@ -47,12 +47,15 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang='en' className={`scroll-smooth scroll-pt-10 ${quicksand.variable} ${newSpirit.variable}`}>
-      <body className="bg-background bg-[url('/paper-lines-tile.png')] bg-size-[100%_9072px] bg-repeat-y bg-top text-foreground flex min-h-screen flex-col font-sans">
+    <html
+      lang='en'
+      className={`scroll-smooth scroll-pt-10 ${quicksand.variable} ${newSpirit.variable}`}
+    >
+      <body className="bg-background bg-[url('/paper-lines-tile.png')] bg-size-[100%_9072px] bg-repeat-y bg-top text-foreground flex min-h-screen flex-col font-sans ">
         <JsonLd data={personSchema} />
         <SkipToContent />
         <Header />
-        <main id='main-content' className='flex-1'>
+        <main id='main-content' className='flex-1 space-y-16 md:space-y-24'>
           {children}
         </main>
         <LetsTalkSection />

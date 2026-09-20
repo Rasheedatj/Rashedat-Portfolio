@@ -1,19 +1,16 @@
 import Image from 'next/image';
 import ButtonLink from '@/components/ui/ButtonLink';
-import type { Hero } from '@/types/home';
 
-type HeroActionsProps = {
-  actions: Hero['actions'];
-};
-
-const HeroActions = ({ actions }: HeroActionsProps) => {
+const HeroActions = () => {
   return (
     <div className='flex flex-wrap items-center gap-6'>
-      <ButtonLink href={actions.primary.href}>
-        {actions.primary.label}
-      </ButtonLink>
-      <ButtonLink href={actions.resume.href} variant='outline' download>
-        {actions.resume.label}
+      <ButtonLink href='/work-gallery'>View My Work</ButtonLink>
+      <ButtonLink
+        href='/Jinadu_Rashedat_Mobile_Engineer_cv.pdf'
+        variant='outline'
+        download
+      >
+        Download Resume
         <Image
           src='/download.svg'
           alt=''

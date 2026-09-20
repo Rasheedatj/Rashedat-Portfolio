@@ -15,7 +15,8 @@ export type Hero = {
 
 export type Client = {
   name: string;
-  logo?: string;
+  logo: string;
+  logoHeight?: number;
 };
 
 export type ProofStat = {

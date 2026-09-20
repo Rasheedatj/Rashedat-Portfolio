@@ -28,6 +28,7 @@
   --color-cocoa-60: #362c2a99;
   --color-ink: #231e15;
   --color-maroon: #461010;
+  --color-maroon-text: #580e00;
   --color-crimson: #a7002c;
   --color-flamingo: #ff5492;
   --color-periwinkle: #b7c6ef;
@@ -35,6 +36,7 @@
   --color-ash: #565b65;
 
   --shadow-2xl: 5px 5px 0;
+  --shadow-project-card: 0px 5px 40px 0px #340a0280;
 }
 
 html {
