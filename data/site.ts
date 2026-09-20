@@ -13,7 +13,16 @@ export const siteConfig = {
 
 export const navItems: NavItem[] = [
   { label: 'Home', href: '/', activePaths: ['/'] },
-  { label: 'Work', href: '/work-gallery', activePaths: ['/work-gallery', '/projects'] },
+  {
+    label: 'Work',
+    href: '/work-gallery',
+    activePaths: ['/work-gallery', '/projects'],
+  },
+  {
+    label: 'Hire Me',
+    href: '/#choose-how-we-work',
+    activePaths: ['/#choose-how-we-work'],
+  },
   { label: 'Testimonials', href: '/#testimonials' },
 ];
 

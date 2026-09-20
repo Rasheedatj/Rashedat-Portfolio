@@ -21,18 +21,22 @@ export type Client = {
 
 export type ProofStat = {
   label: string;
-  description: string;
-  icon: IconType;
+  icon: string;
 };
+
+export type PricingPlanTone = 'espresso' | 'slate' | 'graphite';
 
 export type PricingPlan = {
   id: string;
   name: string;
+  tone: PricingPlanTone;
   description: string;
   price: string;
-  duration?: string;
+  duration: string;
   features: string[];
   cta: { label: string; href: string };
+  /** Sticky-note artwork pinned to the card's top-right corner. */
+  tag?: { src: string; alt: string };
 };
 
 export type TechItem = {
