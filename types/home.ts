@@ -1,5 +1,18 @@
 import type { IconType } from 'react-icons';
 
+export type Hero = {
+  heading: string;
+  description: string;
+  portrait: {
+    src: string;
+    alt: string;
+  };
+  actions: {
+    primary: { label: string; href: string };
+    resume: { label: string; href: string };
+  };
+};
+
 export type Client = {
   name: string;
   logo?: string;
