@@ -17,9 +17,9 @@ const PricingCard = ({ plan, index }: PricingCardProps) => {
   const titleId = `${plan.id}-title`;
 
   return (
-    <article
+    <li
       aria-labelledby={titleId}
-      className={`relative flex w-full gap-9 flex-col rounded-[10px] border-2 border-saffron/30 p-9 text-white shadow-[0_10px_30px_-10px_rgba(51,32,26,0.35)] ${tones[plan.tone]}`}
+      className={`relative flex p-4 md:p-9 w-full gap-9 flex-col rounded-[10px] border-2 border-saffron/30 text-white shadow-[0_10px_30px_-10px_rgba(51,32,26,0.35)] ${tones[plan.tone]}`}
     >
       <section className='space-y-6'>
         {plan.tag && (
@@ -28,7 +28,7 @@ const PricingCard = ({ plan, index }: PricingCardProps) => {
             alt={plan.tag.alt}
             width={420}
             height={253}
-            className='pointer-events-none absolute -top-1 -right-2.5 h-auto w-47.5 max-w-none lg:right-0'
+            className='pointer-events-none absolute -top-7 -right-2.5 h-auto w-47.5 max-w-none lg:-right-2'
           />
         )}
 
@@ -90,7 +90,7 @@ const PricingCard = ({ plan, index }: PricingCardProps) => {
           {plan.cta.label}
         </ButtonLink>
       </div>
-    </article>
+    </li>
   );
 };
 

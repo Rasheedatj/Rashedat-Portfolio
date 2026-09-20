@@ -19,9 +19,7 @@ const PricingSection = () => {
 
         <ul className='grid gap-12.5 lg:grid-cols-3 lg:gap-13'>
           {pricingPlans.map((plan, index) => (
-            <li key={plan.id} className='flex'>
-              <PricingCard plan={plan} index={index} />
-            </li>
+            <PricingCard key={index} plan={plan} index={index} />
           ))}
         </ul>
 
