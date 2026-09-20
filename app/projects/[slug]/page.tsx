@@ -4,7 +4,11 @@ import JsonLd from '@/components/seo/JsonLd';
 import CaseStudySection from '@/components/project-detail/CaseStudySection';
 import MoreProjectsSection from '@/components/project-detail/MoreProjectsSection';
 import ProjectHero from '@/components/project-detail/ProjectHero';
-import { getAllProjects, getOtherProjects, getProjectBySlug } from '@/lib/projects';
+import {
+  getAllProjects,
+  getOtherProjects,
+  getProjectBySlug,
+} from '@/lib/projects';
 import { projectSchema } from '@/lib/schema';
 import { buildMetadata } from '@/lib/seo';
 
@@ -28,7 +32,7 @@ export const generateMetadata = async ({
     title: project.seo?.title ?? project.name,
     description: project.seo?.description ?? (project.summary || undefined),
     path: `/projects/${project.slug}`,
-    image: project.images.ogImage?.src,
+    image: project.images.featured,
   });
 };
 

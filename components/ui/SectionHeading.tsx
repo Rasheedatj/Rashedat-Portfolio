@@ -14,11 +14,11 @@ const SectionHeading = ({
   underline = false,
 }: SectionHeadingProps) => {
   return (
-    <div>
-      <div className='relative w-fit space-y-6'>
+    <div className='space-y-9'>
+      <div className='relative w-fit'>
         <h2
           id={id}
-          className='max-w-[7em] font-display text-3xl leading-7.5 font-medium text-espresso lg:text-[52px] lg:leading-10.5'
+          className='max-w-[7em] font-display text-[28px] leading-7.5 font-medium text-espresso lg:text-5xl lg:leading-10.5'
         >
           {title}
         </h2>
