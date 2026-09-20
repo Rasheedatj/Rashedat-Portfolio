@@ -10,19 +10,21 @@ type NavLinksProps = {
   label: string;
   showActiveIndicator?: boolean;
   onNavigate?: () => void;
+  className?: string;
 };
 
 const NavLinks = ({
   label,
   showActiveIndicator = false,
   onNavigate,
+  className,
 }: NavLinksProps) => {
   const pathname = usePathname();
 
   return (
     <nav aria-label={label}>
       <ul
-        className={`flex items-center ${label === 'Footer' ? 'gap-9' : 'gap-12'}`}
+        className={`flex items-center ${label === 'Footer' ? 'gap-9' : 'gap-12'} ${className}`}
       >
         {navItems.map((item) => {
           const active = isNavItemActive(pathname, item);

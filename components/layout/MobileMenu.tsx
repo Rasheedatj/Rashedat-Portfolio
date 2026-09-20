@@ -46,7 +46,7 @@ const MobileMenu = () => {
             label='Mobile'
             showActiveIndicator
             onNavigate={() => setOpen(false)}
-            className='flex flex-col items-start gap-6'
+            // className='flex flex-col items-start gap-6'
           />
           <ButtonLink href={contactHref}>Let’s Talk</ButtonLink>
         </div>
