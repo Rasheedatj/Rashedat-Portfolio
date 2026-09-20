@@ -4,9 +4,9 @@ import type { SocialPlatform } from '@/types/site';
 
 const icons: Record<SocialPlatform, string> = {
   github: '/github.svg',
-  linkedin: '/linkedin-02.svg',
+  linkedin: '/linkedin.svg',
   x: '/x.svg',
-  email: '/mail-01.svg',
+  email: '/mail.svg',
 };
 
 const SocialLinks = () => {
@@ -20,7 +20,10 @@ const SocialLinks = () => {
             <a
               href={link.href}
               aria-label={link.label}
-              {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
+              {...(external && {
+                target: '_blank',
+                rel: 'noopener noreferrer',
+              })}
             >
               <Image
                 src={icons[link.platform]}

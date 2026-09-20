@@ -10,14 +10,12 @@ type NavLinksProps = {
   label: string;
   showActiveIndicator?: boolean;
   onNavigate?: () => void;
-  className?: string;
 };
 
 const NavLinks = ({
   label,
   showActiveIndicator = false,
   onNavigate,
-  className,
 }: NavLinksProps) => {
   const pathname = usePathname();
 

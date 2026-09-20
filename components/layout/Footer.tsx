@@ -1,5 +1,4 @@
 import LetsConnectNote from '@/components/layout/LetsConnectNote';
-import Logo from '@/components/layout/Logo';
 import NavLinks from '@/components/layout/NavLinks';
 import SocialLinks from '@/components/layout/SocialLinks';
 import Container from '@/components/ui/Container';
