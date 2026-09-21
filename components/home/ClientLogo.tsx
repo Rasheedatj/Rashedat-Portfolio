@@ -9,7 +9,7 @@ const ClientLogo = ({ client }: ClientLogoProps) => {
   const { name, logo } = client;
 
   return (
-    <li className='flex  mx-5 md:mx-10.5 shrink-0 items-center gap-2 text-white'>
+    <div className='flex  mx-5 md:mx-10.5 shrink-0 items-center gap-2 text-white'>
       <Image
         src={logo}
         alt={name + 'logo'}
@@ -18,7 +18,7 @@ const ClientLogo = ({ client }: ClientLogoProps) => {
         aria-hidden='true'
         style={{ height: 34, width: 'auto' }}
       />
-    </li>
+    </div>
   );
 };
 

@@ -1,5 +1,3 @@
-import type { IconType } from 'react-icons';
-
 export type Hero = {
   heading: string;
   description: string;
@@ -42,7 +40,8 @@ export type PricingPlan = {
 export type TechItem = {
   id: string;
   name: string;
-  icon: IconType;
+  /** SVG that already contains the logo and its name. */
+  logo: string;
 };
 
 export type TechStackGroup = {
@@ -54,6 +53,7 @@ export type TechStackGroup = {
 export type Principle = {
   title: string;
   description: string;
+  icon: string;
 };
 
 export type Testimonial = {

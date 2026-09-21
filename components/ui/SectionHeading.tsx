@@ -7,6 +7,8 @@ type SectionHeadingProps = {
   underline?: boolean;
   mobileUnderline?: boolean;
   descriptionClassName?: string;
+  titleClassName?: string;
+  gapClassName?: string;
 };
 
 const SectionHeading = ({
@@ -16,13 +18,15 @@ const SectionHeading = ({
   underline = false,
   mobileUnderline = false,
   descriptionClassName = 'max-w-64 lg:max-w-84',
+  titleClassName = 'max-w-[7.5em]',
+  gapClassName = 'space-y-9',
 }: SectionHeadingProps) => {
   return (
-    <div className='space-y-9'>
+    <div className={gapClassName}>
       <div className='relative w-fit'>
         <h2
           id={id}
-          className='max-w-[7.5em] font-display text-[28px] leading-7.5 font-medium text-espresso lg:text-5xl lg:leading-10.5'
+          className={`font-display text-[28px] leading-7.5 font-medium text-espresso lg:text-5xl lg:leading-10.5 ${titleClassName}`}
         >
           {title}
         </h2>
