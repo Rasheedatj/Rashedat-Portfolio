@@ -29,8 +29,8 @@ export const generateMetadata = async ({
   if (!project) return {};
 
   return buildMetadata({
-    title: project.seo?.title ?? project.name,
-    description: project.seo?.description ?? (project.summary || undefined),
+    title: project.seo?.description,
+    description: project.seo?.description,
     path: `/projects/${project.slug}`,
     image: project.images.featured,
   });

@@ -20,6 +20,9 @@ export const projects: Project[] = [
       annotationArt: '/eatly-arrow.svg',
     },
     caseStudy: [],
+    seo: {
+      description: 'Eatly — Food Delivery App — Case Study',
+    },
   },
   {
     slug: 'koyo',
@@ -40,6 +43,9 @@ export const projects: Project[] = [
       annotationArt: '/koyo-arrow.svg',
     },
     caseStudy: [],
+    seo: {
+      description: 'Koyo — Local Language Learning App — Case Study',
+    },
   },
   {
     slug: 'robo',
@@ -60,6 +66,9 @@ export const projects: Project[] = [
       annotationArt: '/robo-arrow.svg',
     },
     caseStudy: [],
+    seo: {
+      description: 'Robo — Coding App — Case Study',
+    },
   },
   {
     slug: 'jacko',
@@ -77,6 +86,9 @@ export const projects: Project[] = [
       preview: '',
     },
     caseStudy: [],
+    seo: {
+      description: 'Jacko — Exam Study App — Case Study',
+    },
   },
   {
     slug: 'cartwise',
@@ -94,6 +106,9 @@ export const projects: Project[] = [
       preview: '',
     },
     caseStudy: [],
+    seo: {
+      description: 'Cartwise — Grocery Shopping App — Case Study',
+    },
   },
   {
     slug: 'eatly-website',
@@ -113,6 +128,9 @@ export const projects: Project[] = [
       annotationArt: '/eatly-website-arrow.svg',
     },
     caseStudy: [],
+    seo: {
+      description: 'Eatly — Food Delivery Landing Page — Case Study',
+    },
   },
   {
     slug: 'legacy',
@@ -132,5 +150,8 @@ export const projects: Project[] = [
       annotationArt: '/legacy-ink-arrow.svg',
     },
     caseStudy: [],
+    seo: {
+      description: 'Legacy Inks — Business Landing Page — Case Study',
+    },
   },
 ];
