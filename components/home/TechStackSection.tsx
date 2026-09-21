@@ -5,8 +5,8 @@ import { techStackGroups } from '@/data/tech-stack';
 
 const TechStackSection = () => {
   return (
-    <section aria-labelledby='tech-stack-heading' className='pt-4.5 lg:pt-21'>
-      <Container>
+    <section aria-labelledby='tech-stack-heading'>
+      <Container className='space-y-6 md:space-y-12'>
         <SectionHeading
           id='tech-stack-heading'
           title='What I Build With'
@@ -18,7 +18,7 @@ const TechStackSection = () => {
           mobileUnderline
         />
 
-        <ul className='mt-6 space-y-3.5 lg:mt-11 lg:space-y-5'>
+        <ul className='space-y-2 lg:space-y-6'>
           {techStackGroups.map((group, index) => (
             <TechStackGroup key={group.id} group={group} index={index} />
           ))}

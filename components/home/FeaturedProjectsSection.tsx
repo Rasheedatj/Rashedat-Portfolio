@@ -9,27 +9,25 @@ const FeaturedProjectsSection = () => {
 
   return (
     <section aria-labelledby='featured-projects-heading'>
-      <Container>
+      <Container className='space-y-20'>
         <SectionHeading
           id='featured-projects-heading'
           title='Featured Projects'
           description='A Few Things I Have Helped Design, Build And Ship.'
           underline
         />
-
-        <div className='mt-9.5 flex flex-col gap-12 lg:mt-17.5 lg:gap-43'>
-          {projects.map((project, index) => (
-            <ProjectShowcaseCard
-              key={project.slug}
-              project={project}
-              index={index}
-            />
-          ))}
-        </div>
-
-        <div className='mt-22.5 lg:mt-57'>
+        <section className='space-y-23.75'>
+          <div className='flex flex-col gap-12 lg:gap-45'>
+            {projects.map((project, index) => (
+              <ProjectShowcaseCard
+                key={project.slug}
+                project={project}
+                index={index}
+              />
+            ))}
+          </div>
           <ViewAllWorkLink />
-        </div>
+        </section>
       </Container>
     </section>
   );
