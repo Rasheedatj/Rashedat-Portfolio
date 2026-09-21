@@ -14,7 +14,7 @@ const TrustedBySection = () => {
               id='trusted-by-heading'
               className='max-w-52 font-display text-base leading-tight font-semibold text-white md:text-lg'
             >
-              Trusted By Amazing Clients
+              Trusted By Amazing Companies
             </h2>
             <Image
               src='/double-yellow-stroke.svg'

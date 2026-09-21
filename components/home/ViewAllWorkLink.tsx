@@ -6,26 +6,10 @@ const ViewAllWorkLink = () => {
     <div className='flex justify-center'>
       <Link
         href='/work-gallery'
-        className='inline-flex items-center gap-2.5 font-display text-base font-medium text-espresso lg:gap-3 lg:text-[45px]'
+        className='inline-flex items-center gap-2.5 font-display text-lg font-medium text-espresso lg:gap-3 lg:text-[45px]'
       >
         <span className='relative'>
           View All Work
-          {/* <svg
-            viewBox='0 0 178 17'
-            preserveAspectRatio='none'
-            aria-hidden='true'
-            className='pointer-events-none absolute top-full left-0 -mt-1 h-2 w-[86%] lg:-mt-2.5 lg:h-3.5'
-          >
-            <path
-              d='M3.25 3.25C3.277 3.25 3.304 3.25 28.796 5.159C54.289 7.067 105.246 10.883 133.508 12.293C161.771 13.702 165.795 12.589 168.527 11.681C171.26 10.774 172.58 10.105 173.341 9.384C174.103 8.663 174.266 7.91 174.351 6.93C174.435 5.95 174.435 4.766 174.435 3.546'
-              fill='none'
-              stroke='#F7C948'
-              strokeWidth='4'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              vectorEffect='non-scaling-stroke'
-            />
-          </svg> */}
           <Image
             src='single-downward-yellow-stroke.svg'
             alt=''

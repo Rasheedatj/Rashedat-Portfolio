@@ -6,7 +6,7 @@ import { siteConfig } from '@/data/site';
 
 const Footer = () => {
   return (
-    <footer className='pt-24 pb-12 md:pt-36'>
+    <footer className='pt-20 pb-12 md:pt-36'>
       <Container className='space-y-9'>
         <section className='flex flex-col items-start gap-9 md:flex-row md:items-center md:justify-between'>
           <article className='gap-1'>

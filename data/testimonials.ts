@@ -26,10 +26,10 @@ export const testimonials: Testimonial[] = [
     tone: 'flamingo',
   },
   {
-    id: 'Oreoluwa',
+    id: 'josh',
     quote:
       'Truly understands how startups operate. She communicates clearly, hits deadlines, and takes ownership of her work. We trusted her with important parts of our product, and she delivered consistently.',
-    author: 'Oreoluwa',
+    author: 'Josh',
     avatar: '/female-avatar-2.svg',
     tone: 'blue',
   },

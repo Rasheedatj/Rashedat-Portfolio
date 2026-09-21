@@ -16,10 +16,10 @@ const SectionHeading = ({
   title,
   description,
   underline = false,
-  mobileUnderline = false,
+  mobileUnderline = true,
   descriptionClassName = 'max-w-64 lg:max-w-84',
   titleClassName = 'max-w-[7.5em]',
-  gapClassName = 'space-y-9',
+  gapClassName = 'space-y-6 md:space-y-9',
 }: SectionHeadingProps) => {
   return (
     <div className={gapClassName}>

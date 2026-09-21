@@ -5,7 +5,7 @@ import { principles } from '@/data/principles';
 
 const HowIWorkSection = () => {
   return (
-    <section aria-labelledby='how-i-work-heading' className='pt-11 lg:pt-23'>
+    <section aria-labelledby='how-i-work-heading'>
       <Container className='grid gap-7.5 lg:grid-cols-[minmax(12rem,1fr)_minmax(0,56.25rem)] lg:items-start lg:gap-0'>
         <SectionHeading
           id='how-i-work-heading'

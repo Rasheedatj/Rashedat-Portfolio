@@ -11,7 +11,12 @@ export const projects: Project[] = [
     role: 'Mobile Engineer',
     featured: true,
     annotation: 'Food delivery can be fun too!',
-    links: {},
+    links: {
+      appStore:
+        'https://apps.apple.com/ng/app/eatly-food-delivery/id6755495005',
+      playStore:
+        'https://play.google.com/store/apps/details?id=com.technologies.eatly',
+    },
     techStack: ['react-native', 'expo', 'typescript'],
     images: {
       featured: '/eatly-featured.avif',
@@ -34,7 +39,11 @@ export const projects: Project[] = [
     role: 'Mobile Engineer',
     featured: true,
     annotation: 'African culture is beautiful',
-    links: {},
+    links: {
+      appStore: 'https://apps.apple.com/ng/app/koyo/id6744146311',
+      playStore:
+        'https://play.google.com/store/apps/details?id=com.koyo.koyoapp&pcampaignid=web_share',
+    },
     techStack: ['react-native', 'expo', 'typescript'],
     images: {
       featured: '/koyo-featured.avif',
@@ -45,6 +54,28 @@ export const projects: Project[] = [
     caseStudy: [],
     seo: {
       description: 'Koyo — Local Language Learning App — Case Study',
+    },
+  },
+  {
+    slug: 'jacko',
+    name: 'Jacko',
+    category: 'mobile',
+    headline: 'Jacko',
+    summary:
+      'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
+    role: 'Mobile Engineer',
+    featured: false,
+    links: {},
+    techStack: ['react-native', 'expo', 'typescript'],
+    images: {
+      featured: '/jacko-featured.avif',
+      slideShow: [''],
+      preview: '',
+      annotationArt: '/robo-arrow.svg',
+    },
+    caseStudy: [],
+    seo: {
+      description: 'Jacko — Exam Study App — Case Study',
     },
   },
   {
@@ -70,32 +101,14 @@ export const projects: Project[] = [
       description: 'Robo — Coding App — Case Study',
     },
   },
-  {
-    slug: 'jacko',
-    name: 'Jacko',
-    category: 'mobile',
-    headline: 'Jacko',
-    summary: '',
-    role: 'Mobile Engineer',
-    featured: false,
-    links: {},
-    techStack: ['react-native', 'expo', 'typescript'],
-    images: {
-      featured: '/jacko-featured.avif',
-      slideShow: [''],
-      preview: '',
-    },
-    caseStudy: [],
-    seo: {
-      description: 'Jacko — Exam Study App — Case Study',
-    },
-  },
+
   {
     slug: 'cartwise',
     name: 'Cartwise',
     category: 'mobile',
     headline: 'Cartwise',
-    summary: '',
+    summary:
+      'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
     role: 'Mobile Engineer',
     featured: false,
     links: {},
@@ -104,6 +117,7 @@ export const projects: Project[] = [
       featured: '/cartwise-featured.avif',
       slideShow: [''],
       preview: '',
+      annotationArt: '/cartwise-arrow.svg',
     },
     caseStudy: [],
     seo: {
@@ -115,7 +129,8 @@ export const projects: Project[] = [
     name: 'Eatly',
     category: 'website',
     headline: 'Eatly Website',
-    summary: '',
+    summary:
+      'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
     role: 'Front-End Developer',
     featured: false,
     annotation: 'Your website should be as fun as your mobile app',
@@ -137,14 +152,15 @@ export const projects: Project[] = [
     name: 'Legacy',
     category: 'website',
     headline: 'Legacy',
-    summary: '',
+    summary:
+      'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
     role: 'Front-End Developer',
     featured: false,
     annotation: 'A specialist ghostwriting and content studio',
     links: {},
     techStack: ['react', 'nextjs', 'typescript', 'tailwindcss'],
     images: {
-      featured: '/legacy-featured.avif',
+      featured: '/legacy-ink-featured.avif',
       slideShow: [''],
       preview: '',
       annotationArt: '/legacy-ink-arrow.svg',

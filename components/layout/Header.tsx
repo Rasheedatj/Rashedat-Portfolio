@@ -7,7 +7,7 @@ import { contactHref } from '@/data/site';
 
 const Header = () => {
   return (
-    <header className='relative z-20 py-8'>
+    <header className='relative z-20 mb-10 md:mb-20 pt-8'>
       <Container className='flex items-center justify-between'>
         <Logo priority />
         <div className='hidden md:block'>

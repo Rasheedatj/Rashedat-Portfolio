@@ -9,15 +9,15 @@ const FeaturedProjectsSection = () => {
 
   return (
     <section aria-labelledby='featured-projects-heading'>
-      <Container className='space-y-20'>
+      <Container className='space-y-16 md:space-y-20'>
         <SectionHeading
           id='featured-projects-heading'
           title='Featured Projects'
           description='A Few Things I Have Helped Design, Build And Ship.'
           underline
         />
-        <section className='space-y-23.75'>
-          <div className='flex flex-col gap-12 lg:gap-45'>
+        <section className='space-y-20 md:space-y-27'>
+          <ul className='flex flex-col gap-12 lg:gap-45'>
             {projects.map((project, index) => (
               <ProjectShowcaseCard
                 key={project.slug}
@@ -25,7 +25,7 @@ const FeaturedProjectsSection = () => {
                 index={index}
               />
             ))}
-          </div>
+          </ul>
           <ViewAllWorkLink />
         </section>
       </Container>

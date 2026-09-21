@@ -12,7 +12,7 @@ export const metadata = buildMetadata({ path: '/' });
 
 const Page = () => {
   return (
-    <>
+    <section className='space-y-16 md:space-y-27 md:pb-27'>
       <HeroSection />
       <TrustedBySection />
       <FeaturedProjectsSection />
@@ -21,7 +21,7 @@ const Page = () => {
       <TechStackSection />
       <HowIWorkSection />
       <TestimonialsSection />
-    </>
+    </section>
   );
 };
 

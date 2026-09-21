@@ -55,7 +55,7 @@ const RootLayout = ({
         <JsonLd data={personSchema} />
         <SkipToContent />
         <Header />
-        <main id='main-content' className='flex-1 space-y-16 md:space-y-24'>
+        <main id='main-content' className='flex-1 '>
           {children}
         </main>
         <LetsTalkSection />
