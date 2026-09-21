@@ -9,7 +9,7 @@ const FeaturedProjectsSection = () => {
 
   return (
     <section aria-labelledby='featured-projects-heading'>
-      <Container width='w-[min(77.5rem,100%-2rem)]'>
+      <Container>
         <SectionHeading
           id='featured-projects-heading'
           title='Featured Projects'

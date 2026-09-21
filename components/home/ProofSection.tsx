@@ -6,7 +6,7 @@ import { proofStats } from '@/data/proof-stats';
 const ProofSection = () => {
   return (
     <section aria-labelledby='proof-heading'>
-      <Container width='w-full md:w-[min(87.5rem,100%-2rem)]'>
+      <Container width='w-full md:w-[min(87.5rem,100%)]'>
         <div className="flex flex-col justify-center bg-[url('/proof-mobile-bg.avif')] bg-size-[100%_100%] bg-no-repeat px-6 pb-24 pt-28 md:bg-[url('/proof-bg.avif')] lg:aspect-2744/706 lg:flex-row lg:items-center lg:justify-start lg:px-12 lg:pb-0 lg:pt-0 xl:pl-31.5">
           <div className='lg:w-92 lg:shrink-0'>
             <div className='relative w-fit'>

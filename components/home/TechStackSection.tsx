@@ -6,7 +6,7 @@ import { techStackGroups } from '@/data/tech-stack';
 const TechStackSection = () => {
   return (
     <section aria-labelledby='tech-stack-heading' className='pt-4.5 lg:pt-21'>
-      <Container width='w-[min(76.875rem,100%-2rem)]'>
+      <Container>
         <SectionHeading
           id='tech-stack-heading'
           title='What I Build With'

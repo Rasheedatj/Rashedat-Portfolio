@@ -7,7 +7,7 @@ import { pricingPlans } from '@/data/pricing-plans';
 const PricingSection = () => {
   return (
     <section aria-labelledby='pricing-heading' id='choose-how-we-work'>
-      <Container width='w-[min(76.875rem,100%-2rem)] space-y-10'>
+      <Container className='space-y-10'>
         <SectionHeading
           id='pricing-heading'
           title='Choose How We Can Work'
