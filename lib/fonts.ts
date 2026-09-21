@@ -1,4 +1,4 @@
-import { Quicksand } from 'next/font/google';
+import { Patrick_Hand, Quicksand } from 'next/font/google';
 import localFont from 'next/font/local';
 
 /** Variable font: every weight from 300 to 700 is available without listing them. */
@@ -21,4 +21,12 @@ export const newSpirit = localFont({
   display: 'swap',
   variable: '--font-new-spirit',
   fallback: ['Georgia', 'Times New Roman', 'serif'],
+});
+
+/** Handwritten labels and annotations. */
+export const patrickHand = Patrick_Hand({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-patrick-hand',
 });

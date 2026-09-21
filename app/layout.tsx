@@ -6,7 +6,7 @@ import LetsTalkSection from '@/components/layout/LetsTalkSection';
 import SkipToContent from '@/components/layout/SkipToContent';
 import JsonLd from '@/components/seo/JsonLd';
 import { siteConfig } from '@/data/site';
-import { newSpirit, quicksand } from '@/lib/fonts';
+import { newSpirit, patrickHand, quicksand } from '@/lib/fonts';
 import { personSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ const RootLayout = ({
   return (
     <html
       lang='en'
-      className={`scroll-smooth scroll-pt-10 ${quicksand.variable} ${newSpirit.variable}`}
+      className={`scroll-smooth scroll-pt-10 ${quicksand.variable} ${newSpirit.variable} ${patrickHand.variable}`}
     >
       <body className="bg-background bg-[url('/paper-lines-tile.png')] bg-size-[100%_9072px] bg-repeat-y bg-top text-foreground flex min-h-screen flex-col font-sans ">
         <JsonLd data={personSchema} />

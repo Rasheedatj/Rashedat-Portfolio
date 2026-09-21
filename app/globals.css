@@ -11,6 +11,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-new-spirit), Georgia, 'Times New Roman', serif;
+  --font-hand: var(--font-patrick-hand), 'Comic Sans MS', cursive;
 }
 
 @theme {

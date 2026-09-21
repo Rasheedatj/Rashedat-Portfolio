@@ -56,10 +56,12 @@ export type Principle = {
   icon: string;
 };
 
+export type TestimonialTone = 'periwinkle' | 'honey' | 'flamingo' | 'maroon';
+
 export type Testimonial = {
   id: string;
   quote: string;
   author: string;
-  role: string;
-  avatar?: string;
+  avatar: string;
+  tone: string;
 };
