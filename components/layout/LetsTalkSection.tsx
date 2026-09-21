@@ -14,7 +14,7 @@ const LetsTalkSection = () => {
         <div className='space-y-6'>
           <h2
             id='lets-talk-heading'
-            className='font-display text-4xl leading-normal font-medium md:text-5xl'
+            className='font-display text-[34px] leading-normal font-medium md:text-5xl'
           >
             Building Something ?
             <br />

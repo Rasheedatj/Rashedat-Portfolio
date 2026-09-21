@@ -146,8 +146,8 @@ const MobileMenu = () => {
           </button>
         </div>
 
-        <nav aria-label='Mobile' className='mt-34'>
-          <ul className='flex flex-col items-center gap-18'>
+        <nav aria-label='Mobile' className='my-auto'>
+          <ul className='flex flex-col items-center gap-10'>
             {navItems.map((item) => {
               const active = isNavItemActive(pathname, item);
 
@@ -157,7 +157,7 @@ const MobileMenu = () => {
                     href={item.href}
                     onClick={close}
                     aria-current={active ? 'page' : undefined}
-                    className='flex flex-col items-center font-display text-4xl leading-12 font-bold text-lemon'
+                    className='flex flex-col items-center font-display text-3xl leading-12 font-bold text-lemon'
                   >
                     {item.label}
                     {active && (
