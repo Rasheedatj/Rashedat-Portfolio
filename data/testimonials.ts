@@ -28,9 +28,17 @@ export const testimonials: Testimonial[] = [
   {
     id: 'Oreoluwa',
     quote:
-      'Rashedat Took Over 100 Screens From Figma To A Fully Functional Mobile App In Weeks. Her Speed And Execution Helped Us Stay On Track For Launch.',
+      'Truly understands how startups operate. She communicates clearly, hits deadlines, and takes ownership of her work. We trusted her with important parts of our product, and she delivered consistently.',
     author: 'Oreoluwa',
     avatar: '/female-avatar-2.svg',
     tone: 'blue',
+  },
+  {
+    id: 'josh',
+    quote:
+      'Rashedat built us a modern website that gave our app a professional presence online and created a clear path for visitors to discover and download it.',
+    author: 'Oreoluwa',
+    avatar: '/female-avatar-2.svg',
+    tone: 'maroon',
   },
 ];

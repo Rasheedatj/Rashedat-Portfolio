@@ -8,11 +8,11 @@ const TestimonialsSection = () => {
     <section
       id='testimonials'
       aria-labelledby='testimonials-heading'
-      className='relative isolate overflow-x-clip pt-13.5 pb-20.75 lg:pt-20.75 lg:pb-5'
+      className='relative isolate overflow-x-clip pt-10 pb-12 lg:py-12'
     >
       <div
         aria-hidden='true'
-        className="absolute inset-y-0 left-1/2 -z-10 w-[min(81.5rem,100%)] -translate-x-1/2 bg-[url('/testimonial-bg.avif')] bg-cover bg-center bg-no-repeat lg:bg-size-[100%_100%]"
+        className="absolute inset-y-0 left-1/2 -z-10 w-[min(87.5rem,100%)] -translate-x-1/2 bg-[url('/testimonial-bg.avif')] bg-cover bg-center bg-no-repeat lg:bg-size-[100%_100%]"
       />
 
       <div className='ps-5.5 lg:ps-[max(1.5rem,calc(50vw-593px))]'>

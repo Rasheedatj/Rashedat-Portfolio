@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import type { Testimonial, TestimonialTone } from '@/types/home';
+import type { Testimonial } from '@/types/home';
 
 type TestimonialCardProps = {
   testimonial: Testimonial;
@@ -16,14 +16,14 @@ const tones: Record<string, string> = {
 
 const tilts = [
   '-rotate-4 lg:-rotate-2',
-  '-rotate-4 lg:-rotate-1',
+  '-rotate-4 lg:rotate-2',
   '-rotate-4 lg:-rotate-3',
 ];
 
 const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {
   return (
-    <figure
-      className={`relative flex min-h-40 w-72 flex-col py-6 pr-7 pl-6.5 shadow-[0_5px_8px_rgba(35,30,21,0.18)] lg:min-h-50 lg:w-80 lg:py-8 lg:pr-1 lg:pl-6.5 ${tones[testimonial.tone]} ${tilts[index % tilts.length]}`}
+    <li
+      className={`relative shrink-0 snap-start flex min-h-40 w-72 flex-col p-4.5 pt-5 shadow-[0_5px_8px_rgba(35,30,21,0.18)] lg:max-h-50.5 lg:w-80 lg:p-5 lg:pt-6 ${tones[testimonial.tone]} ${tilts[index % tilts.length]}`}
     >
       <Image
         src='/testimonial-yellow-tape.svg'
@@ -59,7 +59,7 @@ const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {
           {testimonial.author}
         </span>
       </figcaption>
-    </figure>
+    </li>
   );
 };
 

@@ -17,7 +17,11 @@ const labelClassName =
 
 const TestimonialsCarousel = ({ testimonials }: TestimonialsCarouselProps) => {
   const scrollerRef = useRef<HTMLUListElement>(null);
-  const [scroll, setScroll] = useState({ canScroll: false, atStart: true, atEnd: true });
+  const [scroll, setScroll] = useState({
+    canScroll: false,
+    atStart: true,
+    atEnd: true,
+  });
 
   const measure = useCallback(() => {
     const el = scrollerRef.current;
@@ -42,21 +46,29 @@ const TestimonialsCarousel = ({ testimonials }: TestimonialsCarouselProps) => {
     const el = scrollerRef.current;
     if (!el) return;
     const [first, second] = Array.from(el.children) as HTMLElement[];
-    const step = second ? second.offsetLeft - first.offsetLeft : first.offsetWidth;
+    const step = second
+      ? second.offsetLeft - first.offsetLeft
+      : first.offsetWidth;
     el.scrollBy({ left: direction * step, behavior: 'smooth' });
   };
 
   return (
-    <div role='region' aria-roledescription='carousel' aria-label='Testimonials'>
+    <div
+      role='region'
+      aria-roledescription='carousel'
+      aria-label='Testimonials'
+    >
       <ul
         ref={scrollerRef}
         onScroll={measure}
         className={`flex snap-x snap-mandatory gap-12 overflow-x-auto pt-8 pb-8 [scrollbar-width:none] lg:gap-26 [&::-webkit-scrollbar]:hidden ${edgePadding}`}
       >
         {testimonials.map((testimonial, index) => (
-          <li key={testimonial.id} className='shrink-0 snap-start'>
-            <TestimonialCard testimonial={testimonial} index={index} />
-          </li>
+          <TestimonialCard
+            key={testimonial.id}
+            testimonial={testimonial}
+            index={index}
+          />
         ))}
       </ul>
 
@@ -69,7 +81,14 @@ const TestimonialsCarousel = ({ testimonials }: TestimonialsCarouselProps) => {
             aria-label='See more testimonials on the left'
             className='flex flex-col items-end gap-3 transition-opacity disabled:opacity-40'
           >
-            <Image src='/arrow-left.svg' alt='' width={100} height={28} aria-hidden='true' className='w-25 max-w-none' />
+            <Image
+              src='/arrow-left.svg'
+              alt=''
+              width={100}
+              height={28}
+              aria-hidden='true'
+              className='w-25 max-w-none'
+            />
             <span className={labelClassName}>See More On The Left</span>
           </button>
           <button
@@ -79,7 +98,14 @@ const TestimonialsCarousel = ({ testimonials }: TestimonialsCarouselProps) => {
             aria-label='See more testimonials on the right'
             className='flex flex-col items-start gap-3 transition-opacity disabled:opacity-40'
           >
-            <Image src='/arrow-left.svg' alt='' width={100} height={28} aria-hidden='true' className='w-25 max-w-none -scale-x-100' />
+            <Image
+              src='/arrow-left.svg'
+              alt=''
+              width={100}
+              height={28}
+              aria-hidden='true'
+              className='w-25 max-w-none -scale-x-100'
+            />
             <span className={labelClassName}>See More On The Right</span>
           </button>
         </div>

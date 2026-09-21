@@ -8,7 +8,7 @@ const LetsTalkSection = () => {
     <section
       id='contact'
       aria-labelledby='lets-talk-heading'
-      className="bg-cocoa bg-[url('/building-something-bg.avif')] bg-cover bg-center pt-23.25 pb-22 text-center text-white"
+      className="bg-cocoa bg-[url('/building-something-bg.avif')] bg-cover bg-center pt-23.25 pb-22 text-center text-white mt-24"
     >
       <Container className='flex flex-col items-center gap-9'>
         <div className='space-y-6'>

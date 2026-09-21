@@ -24,7 +24,7 @@ const NavLinks = ({
   return (
     <nav aria-label={label}>
       <ul
-        className={`flex items-center ${label === 'Footer' ? 'gap-9' : 'gap-12'} ${className}`}
+        className={`flex flex-col md:flex-row md:items-center ${label === 'Footer' ? 'gap-9' : 'gap-12'} ${className}`}
       >
         {navItems.map((item) => {
           const active = isNavItemActive(pathname, item);

@@ -19,7 +19,7 @@ const PricingCard = ({ plan, index }: PricingCardProps) => {
   return (
     <li
       aria-labelledby={titleId}
-      className={`relative flex p-4 md:p-9 w-full gap-9 flex-col rounded-[10px] border-2 border-saffron/30 text-white shadow-[0_10px_30px_-10px_rgba(51,32,26,0.35)] ${tones[plan.tone]}`}
+      className={`relative flex px-9 py-9 md:p-9 w-full gap-9 flex-col rounded-[10px] border-2 border-saffron/30 text-white shadow-[0_10px_30px_-10px_rgba(51,32,26,0.35)] ${tones[plan.tone]}`}
     >
       <section className='space-y-6'>
         {plan.tag && (
@@ -62,7 +62,7 @@ const PricingCard = ({ plan, index }: PricingCardProps) => {
         <hr className='w-46.25 border-white/15' />
 
         <div className='space-y-3'>
-          <p className='font-display text-4xl leading-10 font-medium whitespace-nowrap'>
+          <p className='font-display text-4xl leading-10 font-medium'>
             {plan.price}
           </p>
           <p className='text-[13px] leading-4 font-bold'>{plan.duration}</p>

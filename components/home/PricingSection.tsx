@@ -17,7 +17,7 @@ const PricingSection = () => {
           mobileUnderline
         />
 
-        <ul className='grid gap-12.5 lg:grid-cols-3 lg:gap-13'>
+        <ul className='lg:grid space-y-12.5 lg:space-y-0 gap-12.5 lg:grid-cols-3 lg:gap-13'>
           {pricingPlans.map((plan, index) => (
             <PricingCard key={index} plan={plan} index={index} />
           ))}
