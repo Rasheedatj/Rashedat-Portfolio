@@ -7,32 +7,35 @@ import PricingHelpCallout from '@/components/home/PricingHelpCallout';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { pricingPlans } from '@/data/pricing-plans';
-import { gsap } from '@/lib/gsap';
+import { gsap, ScrollTrigger } from '@/lib/gsap';
 
 const PricingSection = () => {
-  const listRef = useRef<HTMLUListElement>(null);
+  const listRef = useRef<HTMLOListElement>(null);
 
-  // Cards stagger up into view together, once, as the list scrolls in.
   useGSAP(
     () => {
       const list = listRef.current;
-      const cards = list?.children;
-      if (!list || !cards?.length) return;
+      const items = list?.children;
+      if (!list || !items?.length) return;
 
       const mm = gsap.matchMedia();
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.from(cards, {
-          y: 60,
-          opacity: 0,
-          duration: 1.0,
-          ease: 'power3.out',
-          stagger: 0.15,
-          scrollTrigger: {
-            trigger: list,
-            start: 'top 85%',
-            once: true,
-          },
+        gsap.set(items, { opacity: 0, y: 60 });
+
+        ScrollTrigger.batch(items, {
+          start: 'top 85%',
+          once: true,
+          onEnter: (batch) =>
+            gsap.to(batch, {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              ease: 'sine.out',
+              stagger: 0.2,
+              autoAlpha: 1,
+              overwrite: true,
+            }),
         });
       });
     },

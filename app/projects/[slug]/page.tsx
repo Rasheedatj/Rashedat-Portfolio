@@ -6,6 +6,7 @@ import MoreProjectsSection from '@/components/project-detail/MoreProjectsSection
 import ProjectHero from '@/components/project-detail/ProjectHero';
 import {
   getAllProjects,
+  getMetaImage,
   getOtherProjects,
   getProjectBySlug,
 } from '@/lib/projects';
@@ -32,7 +33,7 @@ export const generateMetadata = async ({
     title: project.seo?.description,
     description: project.seo?.description,
     path: `/projects/${project.slug}`,
-    image: project.images.featured,
+    image: getMetaImage(project),
   });
 };
 

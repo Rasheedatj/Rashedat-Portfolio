@@ -32,8 +32,13 @@ const HeroSection = () => {
 
       const masks = [portraitMask, actionsMask];
 
-      const revealOverflow = () =>
-        masks.forEach((mask) => mask.classList.remove('overflow-hidden'));
+      // Each mask only needs to clip while ITS OWN tween is running - clear
+      // it the instant that tween completes, not when the whole sequence
+      // (heading/paragraph included) finishes, otherwise an early-finishing
+      // mask (the portrait) stays clipped while later steps still play.
+      const clearMask = (mask: HTMLElement) =>
+        mask.classList.remove('overflow-hidden');
+      const revealOverflow = () => masks.forEach(clearMask);
 
       const mm = gsap.matchMedia();
 
@@ -58,10 +63,11 @@ const HeroSection = () => {
             mask: 'lines',
             onSplit(self) {
               headingTween = gsap.from(self.lines, {
+                duration: 0.8,
                 yPercent: 100,
                 opacity: 0,
-                duration: 0.9,
-                stagger: 0.08,
+                stagger: 0.1,
+                ease: 'expo.out',
               });
               return headingTween;
             },
@@ -73,10 +79,11 @@ const HeroSection = () => {
             mask: 'lines',
             onSplit(self) {
               paragraphTween = gsap.from(self.lines, {
+                duration: 0.8,
                 yPercent: 100,
                 opacity: 0,
-                duration: 0.8,
-                stagger: 0.06,
+                stagger: 0.1,
+                ease: 'expo.out',
               });
               return paragraphTween;
             },
@@ -87,28 +94,28 @@ const HeroSection = () => {
             .from(portraitMask.firstElementChild, {
               yPercent: 10,
               opacity: 0,
+              onComplete: () => clearMask(portraitMask),
             })
             .add(headingTween, OVERLAP)
             .add(paragraphTween, OVERLAP)
             .from(
               actionsMask.firstElementChild,
-              { yPercent: 10, opacity: 0 },
+              {
+                yPercent: 10,
+                opacity: 0,
+                onComplete: () => clearMask(actionsMask),
+              },
               OVERLAP,
-            )
-            .eventCallback('onComplete', revealOverflow);
+            );
         },
       );
     },
     { scope: sectionRef },
   );
-
   return (
     <section ref={sectionRef} className='pt-6'>
-      <Container className='grid gap-15 md:grid-cols-[30rem_1fr] md:items-center'>
-        <div
-          data-hero='portrait-mask'
-          className='order-2 overflow-hidden md:order-1'
-        >
+      <Container className='grid gap-15 lg:grid-cols-[30rem_1fr] lg:items-center'>
+        <div data-hero='portrait-mask' className='order-2 md:order-1 '>
           <HeroPortrait />
         </div>
         <div className='order-1 space-y-6 md:order-2 md:space-y-12'>

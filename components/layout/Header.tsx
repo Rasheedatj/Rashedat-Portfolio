@@ -83,7 +83,7 @@ const Header = () => {
       <div
         style={{ height: spacerHeight }}
         aria-hidden='true'
-        className='mb-10 md:mb-20'
+        className='md:mb-10'
       />
     </>
   );

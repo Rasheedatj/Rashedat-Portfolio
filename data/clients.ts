@@ -6,4 +6,5 @@ export const clients: Client[] = [
   { name: 'Jacko', logo: '/jacko-logo.svg' },
   { name: 'open-desk', logo: '/open-desk-logo.svg' },
   { name: 'atb', logo: '/atb-logo.svg' },
+  { name: 'legacyinks', logo: '/legacy-ink-logo.svg' },
 ];

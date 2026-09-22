@@ -19,7 +19,11 @@ export const projects: Project[] = [
     },
     techStack: ['react-native', 'expo', 'typescript'],
     images: {
-      featured: '/eatly-featured.avif',
+      featured: {
+        straight: '/eatly-straight-featured.avif',
+        rotated: '/eatly-rotated-featured.avif',
+      },
+      metaImage: '/eatly-featured.avif',
       slideShow: [''],
       preview: '',
       annotationArt: '/eatly-arrow.svg',
@@ -46,7 +50,11 @@ export const projects: Project[] = [
     },
     techStack: ['react-native', 'expo', 'typescript'],
     images: {
-      featured: '/koyo-featured.avif',
+      featured: {
+        straight: '/koyo-straight-featured.avif',
+        rotated: '/koyo-rotated-featured.avif',
+      },
+      metaImage: '/koyo-featured.avif',
       slideShow: [''],
       preview: '',
       annotationArt: '/koyo-arrow.svg',
@@ -68,7 +76,11 @@ export const projects: Project[] = [
     links: {},
     techStack: ['react-native', 'expo', 'typescript'],
     images: {
-      featured: '/jacko-featured.avif',
+      featured: {
+        straight: '/jacko-straight-featured.avif',
+        rotated: '/jacko-rotated-featured.avif',
+      },
+      metaImage: '/jacko-featured.avif',
       slideShow: [''],
       preview: '',
       annotationArt: '/robo-arrow.svg',
@@ -91,7 +103,11 @@ export const projects: Project[] = [
     links: {},
     techStack: ['react-native', 'expo', 'typescript'],
     images: {
-      featured: '/robo-featured.avif',
+      featured: {
+        straight: '/robo-straight-featured.avif',
+        rotated: '/robo-rotated-featured.avif',
+      },
+      metaImage: '/robo-featured.avif',
       slideShow: [''],
       preview: '',
       annotationArt: '/robo-arrow.svg',
@@ -114,7 +130,11 @@ export const projects: Project[] = [
     links: {},
     techStack: ['react-native', 'expo', 'typescript'],
     images: {
-      featured: '/cartwise-featured.avif',
+      featured: {
+        straight: '/cartwise-straight-featured.avif',
+        rotated: '/cartwise-rotated-featured.avif',
+      },
+      metaImage: '/cartwise-featured.avif',
       slideShow: [''],
       preview: '',
       annotationArt: '/cartwise-arrow.svg',
