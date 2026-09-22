@@ -15,6 +15,7 @@ const FeaturedProjectsSection = () => {
           title='Featured Projects'
           description='A Few Things I Have Helped Design, Build And Ship.'
           underline
+          titleClassName='max-w-[4.5em]'
         />
         <section className='space-y-20 md:space-y-27'>
           <ul className='flex flex-col'>
