@@ -15,8 +15,6 @@ const ProjectMockups = ({ project }: ProjectMockupsProps) => {
   const mockupsRef = useRef<HTMLDivElement>(null);
   const rotatedRef = useRef<HTMLImageElement>(null);
 
-  // The rotated mockup slides out from beneath the straight one as the card
-  // scrolls into view. No-op for website projects (string `featured`).
   useGSAP(
     () => {
       const wrapper = mockupsRef.current;
@@ -33,7 +31,7 @@ const ProjectMockups = ({ project }: ProjectMockupsProps) => {
           ease: 'power3.out',
           scrollTrigger: {
             trigger: wrapper,
-            start: 'top 60%',
+            start: 'top 75%',
             once: true,
           },
         });
