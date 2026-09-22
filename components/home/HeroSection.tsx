@@ -1,27 +1,137 @@
+'use client';
+
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
 import HeroActions from '@/components/home/HeroActions';
 import HeroPortrait from '@/components/home/HeroPortrait';
 import Container from '@/components/ui/Container';
+import { gsap, SplitText } from '@/lib/gsap';
+
+const OVERLAP = '-=0.5';
 
 const HeroSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      const root = sectionRef.current;
+      if (!root) return;
+
+      const portraitMask = root.querySelector<HTMLElement>(
+        '[data-hero="portrait-mask"]',
+      );
+      const actionsMask = root.querySelector<HTMLElement>(
+        '[data-hero="actions-mask"]',
+      );
+      const heading = root.querySelector<HTMLElement>('[data-hero="heading"]');
+      const paragraph = root.querySelector<HTMLElement>(
+        '[data-hero="paragraph"]',
+      );
+
+      if (!portraitMask || !actionsMask || !heading || !paragraph) return;
+
+      const masks = [portraitMask, actionsMask];
+
+      const revealOverflow = () =>
+        masks.forEach((mask) => mask.classList.remove('overflow-hidden'));
+
+      const mm = gsap.matchMedia();
+
+      mm.add(
+        {
+          reduceMotion: '(prefers-reduced-motion: reduce)',
+          fullMotion: '(prefers-reduced-motion: no-preference)',
+        },
+        (context) => {
+          const { reduceMotion } = context.conditions as {
+            reduceMotion: boolean;
+          };
+
+          if (reduceMotion) {
+            revealOverflow();
+            return;
+          }
+
+          let headingTween!: gsap.core.Tween;
+          SplitText.create(heading, {
+            type: 'lines',
+            mask: 'lines',
+            onSplit(self) {
+              headingTween = gsap.from(self.lines, {
+                yPercent: 100,
+                opacity: 0,
+                duration: 0.9,
+                stagger: 0.08,
+              });
+              return headingTween;
+            },
+          });
+
+          let paragraphTween!: gsap.core.Tween;
+          SplitText.create(paragraph, {
+            type: 'lines',
+            mask: 'lines',
+            onSplit(self) {
+              paragraphTween = gsap.from(self.lines, {
+                yPercent: 100,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.06,
+              });
+              return paragraphTween;
+            },
+          });
+
+          gsap
+            .timeline({ defaults: { duration: 0.9, ease: 'power3.out' } })
+            .from(portraitMask.firstElementChild, {
+              yPercent: 10,
+              opacity: 0,
+            })
+            .add(headingTween, OVERLAP)
+            .add(paragraphTween, OVERLAP)
+            .from(
+              actionsMask.firstElementChild,
+              { yPercent: 10, opacity: 0 },
+              OVERLAP,
+            )
+            .eventCallback('onComplete', revealOverflow);
+        },
+      );
+    },
+    { scope: sectionRef },
+  );
+
   return (
-    <section className='pt-6 '>
+    <section ref={sectionRef} className='pt-6'>
       <Container className='grid gap-15 md:grid-cols-[30rem_1fr] md:items-center'>
-        <div className='order-2 md:order-1'>
+        <div
+          data-hero='portrait-mask'
+          className='order-2 overflow-hidden md:order-1'
+        >
           <HeroPortrait />
         </div>
-        <div className='order-1 md:order-2 space-y-6 md:space-y-12'>
+        <div className='order-1 space-y-6 md:order-2 md:space-y-12'>
           <article className='space-y-3 md:space-y-6'>
-            <h1 className='font-display text-2xl leading-[1.2] text-espresso md:text-[56px] md:leading-16.25 max-w-175'>
+            <h1
+              data-hero='heading'
+              className='max-w-175 font-display text-2xl leading-[1.2] text-espresso md:text-[56px] md:leading-16.25'
+            >
               I Build Mobile Products That Look Good And Work Even Better.
             </h1>
-            <p className='max-w-132 text-[13px] leading-[1.9] font-semibold text-espresso md:text-lg'>
+            <p
+              data-hero='paragraph'
+              className='max-w-132 text-[13px] leading-[1.9] font-semibold text-espresso md:text-lg'
+            >
               Mobile Engineer With 4 Years Of Experience Building And Shipping
               Production-Ready Applications With React Native, Expo And
               TypeScript.
             </p>
           </article>
 
-          <HeroActions />
+          <div data-hero='actions-mask' className='overflow-hidden'>
+            <HeroActions />
+          </div>
         </div>
       </Container>
     </section>
