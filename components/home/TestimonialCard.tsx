@@ -15,9 +15,9 @@ const tones: Record<string, string> = {
 };
 
 const tilts = [
-  '-rotate-4 lg:-rotate-1',
-  '-rotate-4 lg:rotate-2',
-  '-rotate-4 lg:-rotate-3',
+  '-rotate-2 lg:-rotate-1',
+  '-rotate-2 lg:rotate-2',
+  '-rotate-2 lg:-rotate-3',
 ];
 
 const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) => {

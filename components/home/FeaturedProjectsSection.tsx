@@ -17,7 +17,7 @@ const FeaturedProjectsSection = () => {
           underline
         />
         <section className='space-y-20 md:space-y-27'>
-          <ul className='flex flex-col gap-12 lg:gap-45'>
+          <ul className='flex flex-col'>
             {projects.map((project, index) => (
               <ProjectShowcaseCard
                 key={project.slug}
