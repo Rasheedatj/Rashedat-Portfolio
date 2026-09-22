@@ -15,7 +15,7 @@ const tones: Record<string, string> = {
 };
 
 const tilts = [
-  '-rotate-4 lg:-rotate-2',
+  '-rotate-4 lg:-rotate-1',
   '-rotate-4 lg:rotate-2',
   '-rotate-4 lg:-rotate-3',
 ];
