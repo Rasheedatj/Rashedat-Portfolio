@@ -1,0 +1,78 @@
+'use client';
+
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import TestimonialCard from '@/components/home/TestimonialCard';
+import type { Testimonial } from '@/types/home';
+import { gsap } from '@/lib/gsap';
+
+type TestimonialsCarouselProps = {
+  testimonials: Testimonial[];
+};
+
+const edgePadding = 'ps-5.5 pe-5.5 lg:ps-[max(1.5rem,calc(50vw-593px))]';
+
+const reducedMotionScroll =
+  'motion-reduce:overflow-x-auto motion-reduce:snap-x motion-reduce:snap-mandatory motion-reduce:scroll-ps-5.5 motion-reduce:lg:scroll-ps-[max(1.5rem,calc(50vw-593px))] motion-reduce:[scrollbar-width:none] motion-reduce:[&::-webkit-scrollbar]:hidden';
+
+const TestimonialsCarousel = ({ testimonials }: TestimonialsCarouselProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLUListElement>(null);
+
+  // The whole section (heading + carousel, targeted via its `id` from
+  // TestimonialsSection) pins as one frozen unit - nothing separates -
+  // while this track scrubs horizontally for the pin's duration.
+  useGSAP(
+    () => {
+      const container = containerRef.current;
+      const track = trackRef.current;
+      const section = document.getElementById('testimonials');
+      if (!container || !track || !section) return;
+
+      const mm = gsap.matchMedia();
+
+      mm.add('(prefers-reduced-motion: no-preference)', () => {
+        const distance = () => track.scrollWidth - container.clientWidth;
+
+        gsap.to(track, {
+          x: () => -distance(),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: () => `+=${distance()}`,
+            pin: true,
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        });
+      });
+    },
+    { scope: containerRef },
+  );
+
+  return (
+    <div
+      ref={containerRef}
+      role='region'
+      aria-roledescription='carousel'
+      aria-label='Testimonials'
+      className='overflow-hidden'
+    >
+      <ul
+        ref={trackRef}
+        className={`flex gap-12 py-8 lg:gap-26 ${edgePadding} ${reducedMotionScroll}`}
+      >
+        {testimonials.map((testimonial, index) => (
+          <TestimonialCard
+            key={testimonial.id}
+            testimonial={testimonial}
+            index={index}
+          />
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default TestimonialsCarousel;

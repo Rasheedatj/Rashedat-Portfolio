@@ -24,6 +24,7 @@ export const navItems: NavItem[] = [
     activePaths: ['/#choose-how-we-work'],
   },
   { label: 'Testimonials', href: '/#testimonials' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export const contactHref = '/#contact';
