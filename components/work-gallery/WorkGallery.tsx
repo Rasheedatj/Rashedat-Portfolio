@@ -12,7 +12,7 @@ const WorkGallery = () => {
   const [filter, setFilter] = useState<WorkFilter>('all');
 
   return (
-    <section aria-labelledby='work-gallery-heading' className='pb-27'>
+    <section aria-labelledby='work-gallery-heading'>
       <Container className='space-y-20 md:space-y-45'>
         <WorkGalleryHeader>
           <WorkFilterTabs value={filter} onChange={setFilter} />

@@ -1,4 +1,25 @@
-import type { Project } from '@/types/project';
+import type { CaseStudySection, Project } from '@/types/project';
+
+const placeholderCaseStudy: CaseStudySection[] = [
+  {
+    label: 'Overview',
+    heading:
+      'lorem ipsum dolor sit amet consectetur adipiscing elit dolores repellendus exercitation consequat',
+    body: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Fuga et qui dolor puis maxime assumenda id animi eos aliqua omnis exercitation. Possimus et aliquip dolor nostrud ea adipiscing omnis. Et cupidatat sint accusamus cumque in. Adipiscing et eos qui occaecat deserunt.',
+  },
+  {
+    label: 'Challenge',
+    heading:
+      'lorem ipsum dolor sit amet consectetur adipiscing elit dolores repellendus exercitation consequat',
+    body: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Fuga et qui dolor puis maxime assumenda id animi eos aliqua omnis exercitation. Possimus et aliquip dolor nostrud ea adipiscing omnis. Et cupidatat sint accusamus cumque in. Adipiscing et eos qui occaecat deserunt.',
+  },
+  {
+    label: 'Solution',
+    heading:
+      'lorem ipsum dolor sit amet consectetur adipiscing elit dolores repellendus exercitation consequat',
+    body: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Fuga et qui dolor puis maxime assumenda id animi eos aliqua omnis exercitation. Possimus et aliquip dolor nostrud ea adipiscing omnis. Et cupidatat sint accusamus cumque in. Adipiscing et eos qui occaecat deserunt.',
+  },
+];
 
 export const projects: Project[] = [
   {
@@ -24,11 +45,10 @@ export const projects: Project[] = [
         rotated: '/eatly-rotated-featured.avif',
       },
       metaImage: '/eatly-featured.avif',
-      slideShow: [''],
-      preview: '',
+      cover: ['/eatly-slide-1.avif'],
       annotationArt: '/eatly-arrow.svg',
     },
-    caseStudy: [],
+    caseStudy: placeholderCaseStudy,
     seo: {
       description: 'Eatly — Food Delivery App — Case Study',
     },
@@ -55,11 +75,10 @@ export const projects: Project[] = [
         rotated: '/koyo-rotated-featured.avif',
       },
       metaImage: '/koyo-featured.avif',
-      slideShow: [''],
-      preview: '',
+      cover: ['/koyo-slide-1.avif'],
       annotationArt: '/koyo-arrow.svg',
     },
-    caseStudy: [],
+    caseStudy: placeholderCaseStudy,
     seo: {
       description: 'Koyo — Local Language Learning App — Case Study',
     },
@@ -81,11 +100,10 @@ export const projects: Project[] = [
         rotated: '/jacko-rotated-featured.avif',
       },
       metaImage: '/jacko-featured.avif',
-      slideShow: [''],
-      preview: '',
+      cover: ['/jacko-slide-1.avif'],
       annotationArt: '/robo-arrow.svg',
     },
-    caseStudy: [],
+    caseStudy: placeholderCaseStudy,
     seo: {
       description: 'Jacko — Exam Study App — Case Study',
     },
@@ -108,11 +126,10 @@ export const projects: Project[] = [
         rotated: '/robo-rotated-featured.avif',
       },
       metaImage: '/robo-featured.avif',
-      slideShow: [''],
-      preview: '',
+      cover: ['/robo-slide-1.avif'],
       annotationArt: '/robo-arrow.svg',
     },
-    caseStudy: [],
+    caseStudy: placeholderCaseStudy,
     seo: {
       description: 'Robo — Coding App — Case Study',
     },
@@ -135,11 +152,10 @@ export const projects: Project[] = [
         rotated: '/cartwise-rotated-featured.avif',
       },
       metaImage: '/cartwise-featured.avif',
-      slideShow: [''],
-      preview: '',
+      cover: ['/cartwise-slide-1.avif'],
       annotationArt: '/cartwise-arrow.svg',
     },
-    caseStudy: [],
+    caseStudy: placeholderCaseStudy,
     seo: {
       description: 'Cartwise — Grocery Shopping App — Case Study',
     },
@@ -148,21 +164,22 @@ export const projects: Project[] = [
     slug: 'eatly-website',
     name: 'Eatly',
     category: 'website',
-    headline: 'Eatly Website',
+    headline: 'Eatly — Bringing More Fun to Food Delivery.',
     summary:
       'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
     role: 'Front-End Developer',
     featured: false,
     annotation: 'Your website should be as fun as your mobile app',
+    client: 'Eatly',
+    year: '2025',
     links: {},
     techStack: ['react', 'nextjs', 'typescript', 'tailwindcss'],
     images: {
       featured: '/eatly-website-featured.avif',
-      slideShow: [''],
-      preview: '',
+      cover: '/eatly-website-cover.avif',
       annotationArt: '/eatly-website-arrow.svg',
     },
-    caseStudy: [],
+    caseStudy: placeholderCaseStudy,
     seo: {
       description: 'Eatly — Food Delivery Landing Page — Case Study',
     },
@@ -177,15 +194,16 @@ export const projects: Project[] = [
     role: 'Front-End Developer',
     featured: false,
     annotation: 'A specialist ghostwriting and content studio',
+    client: 'Legacy Inks',
+    year: '2025',
     links: {},
     techStack: ['react', 'nextjs', 'typescript', 'tailwindcss'],
     images: {
       featured: '/legacy-ink-featured.avif',
-      slideShow: [''],
-      preview: '',
+      cover: '/legacy-inks-cover.avif',
       annotationArt: '/legacy-ink-arrow.svg',
     },
-    caseStudy: [],
+    caseStudy: placeholderCaseStudy,
     seo: {
       description: 'Legacy Inks — Business Landing Page — Case Study',
     },

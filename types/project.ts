@@ -20,8 +20,10 @@ export type ProjectLinks = {
   liveSite?: string;
 };
 
+export type CaseStudyLabel = 'Overview' | 'Challenge' | 'Solution';
+
 export type CaseStudySection = {
-  label: string;
+  label: CaseStudyLabel;
   heading: string;
   body: string;
 };
@@ -35,6 +37,13 @@ export type Project = {
   role: string;
   featured: boolean;
   annotation?: string;
+  /**
+   * Client name + project year shown on the case study hero tag. Website
+   * projects are client work, so both are set; mobile apps are self-built
+   * products and leave these unset.
+   */
+  client?: string;
+  year?: string;
   links: ProjectLinks;
   techStack: string[];
   images: {
@@ -46,8 +55,13 @@ export type Project = {
      * projects can omit it and fall back to their `featured` string.
      */
     metaImage?: ProjectImage;
-    slideShow: ProjectImage[];
-    preview?: ProjectImage;
+    /**
+     * Case study hero image(s), named `{slug}-cover(-n)`, e.g.
+     * `legacy-inks-cover`, `eatly-website-cover`. Website projects show a
+     * single static cover; mobile projects show up to 10 mockups
+     * (`eatly-cover-1` … `eatly-cover-10`) in the horizontal-scroll gallery.
+     */
+    cover: ProjectImage | ProjectImage[];
     /** Handwritten note + arrow artwork shown beside the featured image. */
     annotationArt?: ProjectImage;
   };

@@ -25,7 +25,7 @@ const FeaturedProjectsSection = () => {
         gsap.set(items, { opacity: 0, y: 60 });
 
         ScrollTrigger.batch(items, {
-          start: 'top 85%',
+          start: 'top 95%',
           once: true,
           onEnter: (batch) =>
             gsap.to(batch, {

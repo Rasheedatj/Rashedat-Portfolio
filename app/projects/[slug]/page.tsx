@@ -3,7 +3,10 @@ import { notFound } from 'next/navigation';
 import JsonLd from '@/components/seo/JsonLd';
 import CaseStudySection from '@/components/project-detail/CaseStudySection';
 import MoreProjectsSection from '@/components/project-detail/MoreProjectsSection';
+import ProjectAvailability from '@/components/project-detail/ProjectAvailability';
+import ProjectBuiltWith from '@/components/project-detail/ProjectBuiltWith';
 import ProjectHero from '@/components/project-detail/ProjectHero';
+import Container from '@/components/ui/Container';
 import {
   getAllProjects,
   getMetaImage,
@@ -46,9 +49,18 @@ const Page = async ({ params }: PageProps) => {
     <>
       <JsonLd data={projectSchema(project)} />
       <ProjectHero project={project} />
-      {project.caseStudy.map((section) => (
-        <CaseStudySection key={section.heading} section={section} />
-      ))}
+
+      <Container className='mt-10 space-y-8 md:mt-20 md:space-y-12'>
+        <ProjectAvailability project={project} />
+        <ProjectBuiltWith techStack={project.techStack} />
+      </Container>
+
+      <Container className='mt-16 space-y-12 md:mt-27 md:space-y-21'>
+        {project.caseStudy.map((section) => (
+          <CaseStudySection key={section.label} section={section} />
+        ))}
+      </Container>
+
       <MoreProjectsSection projects={getOtherProjects(project.slug)} />
     </>
   );

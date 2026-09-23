@@ -11,9 +11,9 @@ const TechBadge = ({ tech }: TechBadgeProps) => {
       <Image
         src={tech.logo}
         alt={tech.name}
-        width={223}
-        height={33}
-        className='h-4.5 w-auto max-w-none lg:h-8.25'
+        width={135}
+        height={21}
+        className='h-4.5 w-auto max-w-none lg:h-5.25'
       />
     </li>
   );

@@ -98,7 +98,7 @@ const PricingHelpCallout = () => {
       </div>
       <div ref={buttonRef} className='shrink-0 lg:pr-0.5'>
         <ButtonLink href={contactHref} taped>
-          Tell Me About Your Project
+          Book A Call With Me
         </ButtonLink>
       </div>
     </aside>
