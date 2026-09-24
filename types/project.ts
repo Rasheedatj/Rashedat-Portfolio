@@ -37,32 +37,15 @@ export type Project = {
   role: string;
   featured: boolean;
   annotation?: string;
-  /**
-   * Client name + project year shown on the case study hero tag. Website
-   * projects are client work, so both are set; mobile apps are self-built
-   * products and leave these unset.
-   */
+
   client?: string;
   year?: string;
   links: ProjectLinks;
   techStack: string[];
   images: {
     featured: ProjectImage | MobileFeaturedImage;
-    /**
-     * Single flat image used for Open Graph/Twitter cards and other
-     * metadata. Mobile projects need this since `featured` there is a
-     * `{ straight, rotated }` pair, not a shareable single image; website
-     * projects can omit it and fall back to their `featured` string.
-     */
     metaImage?: ProjectImage;
-    /**
-     * Case study hero image(s), named `{slug}-cover(-n)`, e.g.
-     * `legacy-inks-cover`, `eatly-website-cover`. Website projects show a
-     * single static cover; mobile projects show up to 10 mockups
-     * (`eatly-cover-1` … `eatly-cover-10`) in the horizontal-scroll gallery.
-     */
-    cover: ProjectImage | ProjectImage[];
-    /** Handwritten note + arrow artwork shown beside the featured image. */
+    cover: ProjectImage;
     annotationArt?: ProjectImage;
   };
   caseStudy: CaseStudySection[];

@@ -17,9 +17,7 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
   const galleryRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  const isWebsite = project.category === 'website';
   const cover = project.images.cover;
-  const mockups = Array.isArray(cover) ? cover : [];
 
   useGSAP(
     () => {
@@ -79,7 +77,19 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
           {project.headline}
         </h1>
       </Container>
+      <Container>
+        <Image
+          src={cover}
+          alt={`${project.name} website preview`}
+          width={2518}
+          height={1172}
+          sizes='(min-width: 1024px) 1280px, 100vw'
+          className='h-auto w-full '
+          priority
+        />
+      </Container>
 
+      {/* 
       <div>
         {isWebsite && typeof cover === 'string' ? (
           <Container>
@@ -120,7 +130,7 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
             </div>
           </div>
         )}
-      </div>
+      </div> */}
     </section>
   );
 };
