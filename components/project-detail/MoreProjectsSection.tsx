@@ -4,7 +4,6 @@ import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import MoreProjectCard from '@/components/project-detail/MoreProjectCard';
 import Container from '@/components/ui/Container';
-import HandwrittenNote from '@/components/ui/HandwrittenNote';
 import SectionHeading from '@/components/ui/SectionHeading';
 import type { Project } from '@/types/project';
 import { gsap, ScrollTrigger } from '@/lib/gsap';

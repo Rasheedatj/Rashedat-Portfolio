@@ -95,12 +95,12 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
           </Container>
         ) : (
           <div
-            ref={galleryRef}
+            // ref={galleryRef}
             className='overflow-x-auto py-10 [scrollbar-width:none] md:py-16 [&::-webkit-scrollbar]:hidden'
           >
             <div
-              ref={trackRef}
-              className='flex w-max gap-4 px-6 md:gap-8 md:px-[max(1.5rem,calc(50vw-593px))]'
+              // ref={trackRef}
+              className='flex w-max gap-4 px-6 md:gap-8 md:px-[max(1.5rem,calc(50vw-650px))]'
             >
               {mockups.map((src, index) => (
                 <div
