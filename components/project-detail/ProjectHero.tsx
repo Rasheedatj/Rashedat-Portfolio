@@ -17,8 +17,6 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
   const galleryRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
-  const cover = project.images.cover;
-
   useGSAP(
     () => {
       const heading = headingRef.current;
@@ -79,7 +77,7 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
       </Container>
       <Container>
         <Image
-          src={cover}
+          src={project.images.cover}
           alt={`${project.name} website preview`}
           width={2518}
           height={1172}

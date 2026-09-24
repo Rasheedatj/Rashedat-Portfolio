@@ -45,7 +45,7 @@ export const projects: Project[] = [
         rotated: '/eatly-rotated-featured.avif',
       },
       metaImage: '/eatly-featured.avif',
-      cover: '/eatly-cover.avif',
+      cover: '/eatly-coverr.avif',
       annotationArt: '/eatly-arrow.svg',
     },
     caseStudy: placeholderCaseStudy,
