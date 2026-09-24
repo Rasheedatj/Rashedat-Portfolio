@@ -68,7 +68,7 @@ export const projects: Project[] = [
       playStore:
         'https://play.google.com/store/apps/details?id=com.koyo.koyoapp&pcampaignid=web_share',
     },
-    techStack: ['react-native', 'expo', 'typescript'],
+    techStack: ['react-native', 'typescript'],
     images: {
       featured: {
         straight: '/koyo-straight-featured.avif',
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     slug: 'jacko',
     name: 'Jacko',
     category: 'mobile',
-    headline: 'Jacko',
+    headline: 'Jacko — Smart Exam Preparations At Your Fingertips',
     summary:
       'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
     role: 'Mobile Engineer',
@@ -100,7 +100,7 @@ export const projects: Project[] = [
         rotated: '/jacko-rotated-featured.avif',
       },
       metaImage: '/jacko-featured.avif',
-      cover: '/eatly-cover.avif',
+      cover: '/jacko-cover.avif',
       annotationArt: '/robo-arrow.svg',
     },
     caseStudy: placeholderCaseStudy,
@@ -172,7 +172,9 @@ export const projects: Project[] = [
     annotation: 'Your website should be as fun as your mobile app',
     client: 'Eatly',
     year: '2025',
-    links: {},
+    links: {
+      liveSite: 'https://www.eatly.io/',
+    },
     techStack: ['react', 'nextjs', 'typescript', 'tailwindcss'],
     images: {
       featured: '/eatly-website-featured.avif',
