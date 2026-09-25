@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import ButtonLink from '@/components/ui/ButtonLink';
 import type { PricingPlan, PricingPlanTone } from '@/types/home';
+import { calendlyHref, emailHref } from '@/data/site';
 
 type PricingCardProps = {
   plan: PricingPlan;
@@ -86,7 +87,7 @@ const PricingCard = ({ plan, index }: PricingCardProps) => {
       </section>
 
       <div className='self-start mt-auto'>
-        <ButtonLink href={plan.cta.href} variant='light' taped>
+        <ButtonLink href={calendlyHref} variant='light' taped>
           {plan.cta.label}
         </ButtonLink>
       </div>

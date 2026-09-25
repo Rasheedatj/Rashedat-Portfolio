@@ -147,7 +147,7 @@ const MobileMenu = () => {
         </div>
 
         <nav aria-label='Mobile' className='my-auto'>
-          <ul className='flex flex-col items-center gap-10'>
+          <ul className='flex flex-col items-center gap-8'>
             {navItems.map((item) => {
               const active = isNavItemActive(pathname, item);
 

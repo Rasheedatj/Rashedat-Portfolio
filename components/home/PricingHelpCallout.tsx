@@ -3,8 +3,8 @@
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import ButtonLink from '@/components/ui/ButtonLink';
-import { contactHref } from '@/data/site';
 import { gsap, SplitText } from '@/lib/gsap';
+import { calendlyHref } from '@/data/site';
 
 const OVERLAP = '-=0.4';
 
@@ -97,7 +97,7 @@ const PricingHelpCallout = () => {
         </p>
       </div>
       <div ref={buttonRef} className='shrink-0 lg:pr-0.5'>
-        <ButtonLink href={contactHref} taped>
+        <ButtonLink href={calendlyHref} taped>
           Book A Call With Me
         </ButtonLink>
       </div>

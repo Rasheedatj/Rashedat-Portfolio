@@ -7,7 +7,7 @@ import MobileMenu from '@/components/layout/MobileMenu';
 import NavLinks from '@/components/layout/NavLinks';
 import ButtonLink from '@/components/ui/ButtonLink';
 import Container from '@/components/ui/Container';
-import { contactHref } from '@/data/site';
+import { contactHref, emailHref } from '@/data/site';
 import { gsap, ScrollTrigger } from '@/lib/gsap';
 
 const Header = () => {
@@ -72,7 +72,7 @@ const Header = () => {
           </div>
           <div className='flex items-center'>
             <div className='hidden md:block'>
-              <ButtonLink href={contactHref} taped>
+              <ButtonLink href={emailHref} taped>
                 Let’s Talk
               </ButtonLink>
             </div>

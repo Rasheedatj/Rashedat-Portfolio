@@ -49,7 +49,7 @@ const FeaturedProjectsSection = () => {
         <SectionHeading
           id='featured-projects-heading'
           title='Featured Projects'
-          description='A Few Things I Have Helped Design, Build And Ship.'
+          description='A Few Things I Have Helped Build And Ship.'
           underline
           titleClassName='max-w-[4.5em]'
         />
