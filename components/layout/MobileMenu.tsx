@@ -8,6 +8,7 @@ import LetsConnectNote from '@/components/layout/LetsConnectNote';
 import Logo from '@/components/layout/Logo';
 import SocialLinks from '@/components/layout/SocialLinks';
 import { navItems } from '@/data/site';
+import { ScrollSmoother } from '@/lib/gsap';
 import { isNavItemActive } from '@/lib/nav';
 
 const socialIconColor = '#FCB929';
@@ -30,9 +31,13 @@ const MobileMenu = () => {
     const previous = { body: body.style.overflow, html: html.style.overflow };
     body.style.overflow = 'hidden';
     html.style.overflow = 'hidden';
+    // ScrollSmoother drives scrolling itself, so it has to be paused too.
+    const smoother = ScrollSmoother.get();
+    smoother?.paused(true);
     return () => {
       body.style.overflow = previous.body;
       html.style.overflow = previous.html;
+      smoother?.paused(false);
     };
   }, [open]);
 

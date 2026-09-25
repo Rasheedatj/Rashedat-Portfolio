@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import LetsTalkSection from '@/components/layout/LetsTalkSection';
 import SkipToContent from '@/components/layout/SkipToContent';
+import SmoothScroller from '@/components/layout/SmoothScroller';
 import JsonLd from '@/components/seo/JsonLd';
 import { siteConfig } from '@/data/site';
 import { newSpirit, patrickHand, quicksand } from '@/lib/fonts';
@@ -49,17 +50,28 @@ const RootLayout = ({
   return (
     <html
       lang='en'
-      className={`scroll-smooth scroll-pt-10 ${quicksand.variable} ${newSpirit.variable} ${patrickHand.variable}`}
+      className={`scroll-pt-10 ${quicksand.variable} ${newSpirit.variable} ${patrickHand.variable}`}
     >
-      <body className="bg-background bg-[url('/paper-lines-tile.png')] bg-size-[100%_9072px] bg-repeat-y bg-top text-foreground flex min-h-screen flex-col font-sans ">
+      <body className='bg-background text-foreground font-sans'>
         <JsonLd data={personSchema} />
         <SkipToContent />
+        {/* The fixed header stays outside the smoothed content, which is transformed. */}
         <Header />
-        <main id='main-content' className='flex-1 pb-16 md:pb-27'>
-          {children}
-        </main>
-        <LetsTalkSection />
-        <Footer />
+        <SmoothScroller />
+        <div id='smooth-wrapper'>
+          {/* The paper lines live here, not on <body>, so they move with the content. */}
+          <div
+            id='smooth-content'
+            className="flex min-h-screen flex-col bg-[url('/paper-lines-tile.png')] bg-size-[100%_9072px] bg-repeat-y bg-top"
+          >
+            <div aria-hidden='true' className='h-(--header-height) md:mb-10' />
+            <main id='main-content' className='flex-1 pb-16 md:pb-27'>
+              {children}
+            </main>
+            <LetsTalkSection />
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   );

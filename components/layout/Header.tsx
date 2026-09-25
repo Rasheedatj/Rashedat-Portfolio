@@ -1,7 +1,7 @@
 'use client';
 
 import { useGSAP } from '@gsap/react';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import Logo from '@/components/layout/Logo';
 import MobileMenu from '@/components/layout/MobileMenu';
 import NavLinks from '@/components/layout/NavLinks';
@@ -12,13 +12,18 @@ import { gsap, ScrollTrigger } from '@/lib/gsap';
 
 const Header = () => {
   const headerRef = useRef<HTMLElement>(null);
-  const [spacerHeight, setSpacerHeight] = useState(0);
 
+  // Publishes the header's height for the spacer in the root layout, which has
+  // to live inside the smooth-scroll content rather than next to the header.
   useLayoutEffect(() => {
     const header = headerRef.current;
     if (!header) return;
 
-    const updateHeight = () => setSpacerHeight(header.offsetHeight);
+    const updateHeight = () =>
+      document.documentElement.style.setProperty(
+        '--header-height',
+        `${header.offsetHeight}px`,
+      );
     updateHeight();
 
     const resizeObserver = new ResizeObserver(updateHeight);
@@ -60,32 +65,25 @@ const Header = () => {
   );
 
   return (
-    <>
-      <header
-        ref={headerRef}
-        className="fixed inset-x-0 top-0 z-40 bg-background/90 py-5 backdrop-blur-sm bg-[url('/paper-lines-tile.png')] "
-      >
-        <Container className='flex items-center justify-between'>
-          <Logo priority />
+    <header
+      ref={headerRef}
+      className="fixed inset-x-0 top-0 z-40 bg-background/90 py-5 backdrop-blur-sm bg-[url('/paper-lines-tile.png')] "
+    >
+      <Container className='flex items-center justify-between'>
+        <Logo priority />
+        <div className='hidden md:block'>
+          <NavLinks label='Primary' showActiveIndicator />
+        </div>
+        <div className='flex items-center'>
           <div className='hidden md:block'>
-            <NavLinks label='Primary' showActiveIndicator />
+            <ButtonLink href={emailHref} taped>
+              Let’s Talk
+            </ButtonLink>
           </div>
-          <div className='flex items-center'>
-            <div className='hidden md:block'>
-              <ButtonLink href={emailHref} taped>
-                Let’s Talk
-              </ButtonLink>
-            </div>
-            <MobileMenu />
-          </div>
-        </Container>
-      </header>
-      <div
-        style={{ height: spacerHeight }}
-        aria-hidden='true'
-        className='md:mb-10'
-      />
-    </>
+          <MobileMenu />
+        </div>
+      </Container>
+    </header>
   );
 };
 
