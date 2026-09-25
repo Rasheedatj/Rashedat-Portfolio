@@ -1,28 +1,68 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import { Poppins } from 'next/font/google';
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import LetsTalkSection from '@/components/layout/LetsTalkSection';
+import SkipToContent from '@/components/layout/SkipToContent';
+import JsonLd from '@/components/seo/JsonLd';
+import { siteConfig } from '@/data/site';
+import { newSpirit, patrickHand, quicksand } from '@/lib/fonts';
+import { personSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Rashedat Jinadu Portfolio',
-  description: 'A frontend web and mobile application developer',
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s `,
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: '/',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  robots: { index: true, follow: true },
 };
 
-const roboto = Poppins({
-  weight: ['200', '400', '700'],
-  subsets: ['latin'],
-  variable: '--font-roboto',
-});
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
-    <html lang='en' className={`scroll-smooth scroll-pt-10 ${roboto.variable}`}>
-      <body className='bg-background text-foreground  flex flex-col md:flex-row justify-between md:max-w-11/12 lg:max-w-4/5 mx-auto font-sans scroll-smooth scroll-pt-10'>
-        {children}
+    <html
+      lang='en'
+      className={`scroll-smooth scroll-pt-10 ${quicksand.variable} ${newSpirit.variable} ${patrickHand.variable}`}
+    >
+      <body className="bg-background bg-[url('/paper-lines-tile.png')] bg-size-[100%_9072px] bg-repeat-y bg-top text-foreground flex min-h-screen flex-col font-sans ">
+        <JsonLd data={personSchema} />
+        <SkipToContent />
+        <Header />
+        <main id='main-content' className='flex-1 pb-16 md:pb-27'>
+          {children}
+        </main>
+        <LetsTalkSection />
+        <Footer />
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
