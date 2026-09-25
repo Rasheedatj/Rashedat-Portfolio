@@ -76,8 +76,9 @@ const ProjectShowcaseCard = ({ project, index }: ProjectShowcaseCardProps) => {
           <div className='flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-3'>
             <p className='text-[10px] font-bold text-maroon-text lg:text-[13px]'>
               {project.category === 'mobile'
-                ? 'Available On'
-                : 'See Live Preview'}
+                ? (project.links.appStore || project.links.playStore) &&
+                  'Available On'
+                : project.links.liveSite && 'See Live Preview'}
             </p>
             <StoreBadges links={project.links} type={project.category} />
           </div>

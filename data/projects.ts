@@ -21,6 +21,87 @@ const placeholderCaseStudy: CaseStudySection[] = [
   },
 ];
 
+const koyoCaseStudy: CaseStudySection[] = [
+  {
+    label: 'Overview',
+    heading:
+      'Helping people reconnect with Nigerian languages, one lesson at a time',
+    body: "Millions of Nigerians, at home and abroad, understand a little of their family's language but never learned to speak it with confidence. Koyo set out to change that with a mobile app that turns Nigerian languages into short, friendly lessons people can pick up in a few minutes a day. I worked on Koyo as part of a product team, overseeing the mobile side of things: shaping how the app was built, guiding the mobile engineers, and making sure what we shipped felt dependable in the hands of real learners.",
+  },
+  {
+    label: 'Challenge',
+    heading:
+      'A good idea held back by an app that did not always show up for its learners',
+    body: 'As more people joined, the cracks started to show. Lessons sometimes failed to load, progress did not always appear where learners left it, and screens could stall on a slow connection, which is a common reality for many of our users. The design had also grown piece by piece and no longer felt like one product. For a learning app, this is serious. Learning a language depends on habit, and every broken moment gives someone a reason to stop coming back. Our store reviews made it clear that reliability, not new features, was what we needed to fix first.',
+  },
+  {
+    label: 'Solution',
+    heading:
+      'Rebuilding the experience from the ground up and making it dependable',
+    body: "We tackled the problem on two fronts. First, the team rebuilt the entire interface, giving Koyo a cleaner, more consistent look that made lessons easier to follow and more enjoyable to come back to. Second, and the work I am proudest of, I led a complete rethink of how the app fetches and keeps track of information behind the scenes. Rather than having every screen ask for its content separately and hope for the best, the app now handles this in one organised, predictable way: it remembers what it has already loaded, retries quietly when a connection drops, and keeps learners' progress in sync. The result was a 97% drop in errors, a noticeably smoother experience, and a higher rating on the app stores as learners felt the difference.",
+  },
+];
+
+const eatlyCaseStudy: CaseStudySection[] = [
+  {
+    label: 'Overview',
+    heading:
+      'Turning a launched but struggling food app into one people enjoy using',
+    body: 'Eatly is a food delivery app built to make ordering a meal feel as satisfying as eating it. The app was already live when its founder brought me in, but it was not living up to that promise. Working alongside a designer and a backend engineer, I led the mobile rebuild, taking Eatly from an app users struggled with to a polished product that was relaunched on the App Store and Google Play in three months.',
+  },
+  {
+    label: 'Challenge',
+    heading:
+      'An app that looked unfinished and promised more than it delivered',
+    body: 'The first version of Eatly had two serious problems. It was hard to look at: the design felt cluttered and inconsistent, which made it difficult for customers to trust the app with their money. Worse, much of what they saw was not real. Some buttons did nothing when tapped, and the wallet looked complete on screen but did not actually work. For a food business, where people expect to order, pay and track a meal without thinking twice, this was costing the founder customers and credibility. Small fixes would not solve it. The app needed to be rebuilt properly.',
+  },
+  {
+    label: 'Solution',
+    heading:
+      'Rebuilding Eatly from scratch in three months, then seeing it through launch',
+    body: 'Together with the designer and backend engineer, we rebuilt both the look and the substance of the app from the ground up. The new interface is clean and polished, and every feature on screen now does what it says. I built the core experience: secure sign up and login with a second verification step, card payments through Paystack, a working wallet, live tracking so customers can follow their order to their door, a fast and flexible search, and meal suggestions that change with the time of day, so breakfast shows up in the morning and dinner in the evening. When both Apple and Google rejected the first submission, I recognised the cause straight away, fixed it, and had the app approved on both stores the same day. After launch I stayed on for a month of maintenance to make sure the app ran smoothly for real customers before handing it over.',
+  },
+];
+
+const eatlyWebsiteCaseStudy: CaseStudySection[] = [
+  {
+    label: 'Overview',
+    heading:
+      'Giving people a reason to download Eatly before they ever open it',
+    body: "Eatly's mobile app serves three different groups: customers who order food, vendors who sell it, and riders who deliver it. Building the app was only half the job. People had to understand what Eatly was and why it was worth their time before they would install it. I built the Eatly website to do exactly that: a modern, animated landing experience that introduces the product and turns curious visitors into app users.",
+  },
+  {
+    label: 'Challenge',
+    heading: 'Asking strangers to download an app they had never heard of',
+    body: 'Sending people straight to an app store is a big ask when they know little about the product. Most visitors will not download something they cannot picture using, and a single generic page could not speak to everyone at once. A hungry customer, a restaurant owner looking for more orders and a rider looking for flexible work all care about very different things. Eatly needed a front door that felt trustworthy, worked on any device and told each of these groups, in their own terms, why the app was for them.',
+  },
+  {
+    label: 'Solution',
+    heading:
+      'One polished website with a dedicated story for customers, vendors and riders',
+    body: 'I built a fast, visually polished website with smooth animations that make Eatly feel lively and credible from the first scroll. Instead of one page for everyone, the site has three main pages, one each for customers, vendors and riders. Each explains what Eatly offers that audience and ends with a clear invitation to download the app. Every page adapts cleanly to phones, tablets and desktops, so the experience holds up wherever someone first discovers Eatly. The result is a website that does the explaining and convincing up front, so by the time people reach the app store, they already know why they are there.',
+  },
+];
+
+const legacyCaseStudy: CaseStudySection[] = [
+  {
+    label: 'Overview',
+    heading:
+      'A website that earns the trust of high-end clients before the first call',
+    body: 'Legacy Inks is a specialist ghostwriting and content studio that works with high-end clients. Its founder had built a strong reputation through referrals and word of mouth, but that reputation was not showing up online. I designed and built the Legacy Inks website from start to finish, giving the business a professional home on the internet that reflects the quality of its work and makes it easy for the right clients to find it, trust it and get in touch.',
+  },
+  {
+    label: 'Challenge',
+    heading: 'Great work, but little proof of it online',
+    body: 'Many business owners hit the same wall: they are good at what they do, but when a potential client looks them up, there is little to find, or what they find looks dated and generic. For a studio serving premium clients, that gap is costly, because people who pay for quality judge a business by its first impression. The founder needed to show up online with the same credibility he had in person. The usual route was also a headache: hire a designer, then find a developer, then manage the back and forth between them, with more time, more cost and more room for the final result to drift from the original vision.',
+  },
+  {
+    label: 'Solution',
+    heading: 'Design and development handled in one place, from idea to launch',
+    body: "I took on both the design and the build, so the founder had one person to work with from the first conversation to launch, with no separate designer to hire and no gaps between how the site was imagined and how it was delivered. We started with what his clients needed to see and feel, then shaped a clean, refined website that presents the studio's services clearly, builds confidence at every scroll and guides visitors toward getting in touch. It is fast, looks sharp on every screen size and is built to be found by people searching for the services he offers. Legacy Inks now has an online presence that matches the calibre of its clients and works for the business around the clock.",
+  },
+];
+
 export const projects: Project[] = [
   {
     slug: 'eatly',
@@ -48,7 +129,7 @@ export const projects: Project[] = [
       cover: '/eatly-coverr.avif',
       annotationArt: '/eatly-arrow.svg',
     },
-    caseStudy: placeholderCaseStudy,
+    caseStudy: eatlyCaseStudy,
     seo: {
       description: 'Eatly — Food Delivery App — Case Study',
     },
@@ -78,7 +159,7 @@ export const projects: Project[] = [
       cover: '/koyo-coverr.avif',
       annotationArt: '/koyo-arrow.svg',
     },
-    caseStudy: placeholderCaseStudy,
+    caseStudy: koyoCaseStudy,
     seo: {
       description: 'Koyo — Local Language Learning App — Case Study',
     },
@@ -87,7 +168,7 @@ export const projects: Project[] = [
     slug: 'jacko',
     name: 'Jacko',
     category: 'mobile',
-    headline: 'Jacko — Smart Exam Preparations At Your Fingertips',
+    headline: 'Jacko — Bringing Smart Exam Prep To Your Fingertips',
     summary:
       'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
     role: 'Mobile Engineer',
@@ -137,9 +218,9 @@ export const projects: Project[] = [
 
   {
     slug: 'cartwise',
-    name: 'Cartwise',
+    name: 'Cartwise ',
     category: 'mobile',
-    headline: 'Cartwise',
+    headline: 'Cartwise - A Better way to shop groceries',
     summary:
       'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
     role: 'Mobile Engineer',
@@ -148,11 +229,11 @@ export const projects: Project[] = [
     techStack: ['react-native', 'expo', 'typescript'],
     images: {
       featured: {
-        straight: '/cartwise-straight-featured.avif',
+        straight: '/cartwise-straight-featuredd.avif',
         rotated: '/cartwise-rotated-featured.avif',
       },
       metaImage: '/cartwise-featured.avif',
-      cover: '/eatly-cover.avif',
+      cover: '/cartwise-cover.avif',
       annotationArt: '/cartwise-arrow.svg',
     },
     caseStudy: placeholderCaseStudy,
@@ -181,7 +262,7 @@ export const projects: Project[] = [
       cover: '/eatly-website-cover.avif',
       annotationArt: '/eatly-website-arrow.svg',
     },
-    caseStudy: placeholderCaseStudy,
+    caseStudy: eatlyWebsiteCaseStudy,
     seo: {
       description: 'Eatly — Food Delivery Landing Page — Case Study',
     },
@@ -190,7 +271,7 @@ export const projects: Project[] = [
     slug: 'legacy',
     name: 'Legacy',
     category: 'website',
-    headline: 'Legacy',
+    headline: 'Legacy Inks —  Helping A Content Studio Stay Visible',
     summary:
       'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
     role: 'Front-End Developer',
@@ -205,7 +286,7 @@ export const projects: Project[] = [
       cover: '/legacy-inks-cover.avif',
       annotationArt: '/legacy-ink-arrow.svg',
     },
-    caseStudy: placeholderCaseStudy,
+    caseStudy: legacyCaseStudy,
     seo: {
       description: 'Legacy Inks — Business Landing Page — Case Study',
     },

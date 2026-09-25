@@ -11,7 +11,9 @@ const ProjectAvailability = ({ project }: ProjectAvailabilityProps) => {
   return (
     <div className='flex flex-col gap-3 md:flex-row md:items-end md:gap-6'>
       <p className='text-xs font-bold text-maroon-text md:text-base w-35'>
-        {isWebsite ? 'See Live Preview' : 'Available On'}
+        {isWebsite
+          ? project.links.liveSite && 'See Live Preview'
+          : project.links.appStore && 'Available On'}
       </p>
       <StoreBadges
         links={project.links}

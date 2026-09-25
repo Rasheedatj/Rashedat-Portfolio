@@ -70,7 +70,7 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
       <Container className='flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between'>
         <h1
           ref={headingRef}
-          className='max-w-200 font-display text-2xl leading-[1.2] text-espresso md:text-[56px] md:leading-16.25'
+          className='max-w-250 font-display text-2xl leading-[1.2] text-espresso md:text-[56px] md:leading-16.25 capitalize'
         >
           {project.headline}
         </h1>
