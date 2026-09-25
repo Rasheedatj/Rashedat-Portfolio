@@ -102,6 +102,42 @@ const legacyCaseStudy: CaseStudySection[] = [
   },
 ];
 
+const roboCaseStudy: CaseStudySection[] = [
+  {
+    label: 'Overview',
+    heading: 'Making the first steps into coding feel achievable',
+    body: 'Robo is a mobile learning app for complete beginners who want to understand programming but do not know where to start. It breaks coding concepts into short, practical lessons that fit into a few spare minutes on a phone, so learning feels like steady progress rather than a mountain to climb.',
+  },
+  {
+    label: 'Challenge',
+    heading: 'Most beginners quit before anything clicks',
+    body: "Education products live or die on whether people keep coming back. Beginner coders are especially easy to lose: many learning tools assume knowledge they do not have yet, lessons are long and heavy on jargon, and a first confusing session is often the last. For anyone building in education, the challenge is twofold: make hard material feel approachable, and get a working product into learners' hands quickly enough to see what actually keeps them engaged, rather than spending months perfecting ideas that have never been tested.",
+  },
+  {
+    label: 'Solution',
+    heading: 'Bite-sized lessons, built and shipped at speed',
+    body: "Robo keeps every lesson short, plain-spoken and hands-on, with clear progress that gives learners a small win each time they open the app. Just as important was how quickly it came together. I moved from idea to a complete, working app in a short timeframe by deciding early what mattered most to a beginner, building those parts first and polishing as I went instead of letting the scope grow. That pace is what early-stage teams need most: a real product in users' hands quickly, so decisions are based on how people actually use it rather than on guesswork.",
+  },
+];
+
+const cartwiseCaseStudy: CaseStudySection[] = [
+  {
+    label: 'Overview',
+    heading: 'A calmer, faster way to do the grocery run',
+    body: 'Cartwise is a mobile grocery shopping app designed to make one of the most routine chores feel quick and effortless. Shoppers can browse, find what they need and build their cart in a few taps, with an interface that stays clear even when there are hundreds of products to choose from. I built Cartwise as a self-initiated product, taking a detailed design from Figma and turning it into a complete mobile app.',
+  },
+  {
+    label: 'Challenge',
+    heading: 'In online shopping, small details decide whether people buy',
+    body: 'E-commerce businesses spend real money on design, then often watch it get lost in the build. Spacing drifts, colours and fonts shift, product cards look slightly different from screen to screen, and the polished experience that was signed off in the design never quite makes it to customers. In a shopping app, that gap matters: an interface that feels a little off feels less trustworthy, and a less trustworthy checkout is where carts get abandoned. The challenge was to build a grocery app that looks and feels exactly as it was designed, on every screen.',
+  },
+  {
+    label: 'Solution',
+    heading: 'A pixel-faithful build of the design, screen for screen',
+    body: 'I treated the Figma design as the source of truth and built Cartwise to match it closely, from layout and spacing to typography, colours and the small interactions that make an app feel finished. Reusable building blocks, such as product cards, buttons and cart items, keep every screen consistent, so the app stays faithful to the design as it grows. The result is a shopping experience that is clean, easy to browse and true to what the designer intended. For businesses, that means the investment in design shows up in the product customers actually use.',
+  },
+];
+
 export const projects: Project[] = [
   {
     slug: 'eatly',
@@ -210,7 +246,7 @@ export const projects: Project[] = [
       cover: '/robo-cover.avif',
       annotationArt: '/robo-arrow.svg',
     },
-    caseStudy: placeholderCaseStudy,
+    caseStudy: roboCaseStudy,
     seo: {
       description: 'Robo — Coding App — Case Study',
     },
@@ -236,7 +272,7 @@ export const projects: Project[] = [
       cover: '/cartwise-cover.avif',
       annotationArt: '/cartwise-arrow.svg',
     },
-    caseStudy: placeholderCaseStudy,
+    caseStudy: cartwiseCaseStudy,
     seo: {
       description: 'Cartwise — Grocery Shopping App — Case Study',
     },
