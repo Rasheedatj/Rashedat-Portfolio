@@ -36,7 +36,7 @@ const WorkGalleryHeader = ({ children }: WorkGalleryHeaderProps) => {
           .from(headingSplit.chars, {
             yPercent: 100,
             opacity: 0,
-            duration: 0.9,
+            duration: 0.5,
             stagger: 0.02,
             ease: 'power3.out',
           })
@@ -45,7 +45,7 @@ const WorkGalleryHeader = ({ children }: WorkGalleryHeaderProps) => {
             {
               yPercent: 100,
               opacity: 0,
-              duration: 0.8,
+              duration: 0.5,
               stagger: 0.06,
               ease: 'power3.out',
             },
@@ -65,7 +65,7 @@ const WorkGalleryHeader = ({ children }: WorkGalleryHeaderProps) => {
         <h1
           ref={headingRef}
           id='work-gallery-heading'
-          className=' font-display text-[28px] leading-7.5 font-medium text-espresso lg:text-[45px] lg:leading-12.5'
+          className='lg:max-w-40 font-display text-[28px] leading-7.5 font-medium text-espresso lg:text-[45px] lg:leading-12.5'
         >
           Work Gallery
         </h1>

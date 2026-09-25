@@ -130,8 +130,8 @@ const HeroSection = () => {
               data-hero='paragraph'
               className='max-w-132 text-[13px] leading-[1.9] font-semibold text-espresso md:text-lg'
             >
-              Mobile Engineer With 4 Years Of Experience Building And Shipping
-              Production-Ready Applications With React Native, Expo And
+              Mobile Software Engineer With 4 Years Of Experience Building And
+              Shipping Production-Ready Applications With React Native, Expo And
               TypeScript.
             </p>
           </article>

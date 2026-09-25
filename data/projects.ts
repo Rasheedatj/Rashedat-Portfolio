@@ -200,31 +200,32 @@ export const projects: Project[] = [
       description: 'Koyo — Local Language Learning App — Case Study',
     },
   },
-  {
-    slug: 'jacko',
-    name: 'Jacko',
-    category: 'mobile',
-    headline: 'Jacko — Bringing Smart Exam Prep To Your Fingertips',
-    summary:
-      'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
-    role: 'Mobile Engineer',
-    featured: false,
-    links: {},
-    techStack: ['react-native', 'expo', 'typescript'],
-    images: {
-      featured: {
-        straight: '/jacko-straight-featured.avif',
-        rotated: '/jacko-rotated-featured.avif',
-      },
-      metaImage: '/jacko-featured.avif',
-      cover: '/jacko-cover.avif',
-      annotationArt: '/robo-arrow.svg',
-    },
-    caseStudy: placeholderCaseStudy,
-    seo: {
-      description: 'Jacko — Exam Study App — Case Study',
-    },
-  },
+  // JACKO
+  // {
+  //   slug: 'jacko',
+  //   name: 'Jacko',
+  //   category: 'mobile',
+  //   headline: 'Jacko — Bringing Smart Exam Prep To Your Fingertips',
+  //   summary:
+  //     'Built a learning app that helps beginners understand programming languages through simple, practical lessons.',
+  //   role: 'Mobile Engineer',
+  //   featured: false,
+  //   links: {},
+  //   techStack: ['react-native', 'expo', 'typescript'],
+  //   images: {
+  //     featured: {
+  //       straight: '/jacko-straight-featured.avif',
+  //       rotated: '/jacko-rotated-featured.avif',
+  //     },
+  //     metaImage: '/jacko-featured.avif',
+  //     cover: '/jacko-cover.avif',
+  //     annotationArt: '/robo-arrow.svg',
+  //   },
+  //   caseStudy: placeholderCaseStudy,
+  //   seo: {
+  //     description: 'Jacko — Exam Study App — Case Study',
+  //   },
+  // },
   {
     slug: 'robo',
     name: 'Robo',

@@ -30,7 +30,7 @@ export const testimonials: Testimonial[] = [
     quote:
       'Truly understands how startups operate. She communicates clearly, hits deadlines, and takes ownership of her work. We trusted her with important parts of our product, and she delivered consistently.',
     author: 'Josh',
-    avatar: '/female-avatar-2.svg',
+    avatar: '/male-avatar-1.svg',
     tone: 'blue',
   },
   {
