@@ -20,7 +20,7 @@ const ProjectShowcaseCard = ({ project, index }: ProjectShowcaseCardProps) => {
   return (
     <li
       aria-labelledby={titleId}
-      className={`relative overflow-hidden rounded-[20px] min-h-144 mb-12  ${project.category === 'mobile' ? 'lg:mt-27' : 'lg:mt-9'} ${index === 0 && 'lg:mt-0!'} bg-[#F1F1D4] bg-[url('/project-bg.avif')] bg-size-[100%_100%] px-6.5 pt-8.5 shadow-project-card lg:overflow-visible lg:pt-13 lg:pr-0 lg:pb-10.5 lg:pl-17.5`}
+      className={`relative overflow-hidden rounded-[20px]  mb-12  ${project.category === 'mobile' ? 'lg:mt-27' : 'lg:mt-9'} ${index === 0 && 'lg:mt-0!'} bg-[#F1F1D4] bg-[url('/project-bg.avif')] bg-size-[100%_100%] px-6.5 pt-8.5 shadow-project-card lg:overflow-visible lg:pt-13 lg:pr-0 lg:pb-10.5 lg:pl-17.5`}
     >
       <div className='lg:max-w-114 space-y-9'>
         <div className='space-y-6'>

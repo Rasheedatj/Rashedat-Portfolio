@@ -3,37 +3,48 @@ import Image from 'next/image';
 type ProjectClientTagProps = {
   client: string;
   year: string;
+  className?: string;
+  ref?: React.Ref<HTMLDivElement>;
 };
 
-const ProjectClientTag = ({ client, year }: ProjectClientTagProps) => {
+const ProjectClientTag = ({
+  client,
+  year,
+  className = '',
+  ref,
+}: ProjectClientTagProps) => {
   return (
-    <div className='relative w-fit rotate-3 rounded-lg bg-maroon px-4 py-3 text-honey shadow-2xl md:rounded-xl md:px-6 md:py-4'>
+    <div
+      ref={ref}
+      className={`@container relative aspect-461/410 w-26 shrink-0 md:w-54 ${className}`}
+    >
       <Image
-        src='/yellow-tape.svg'
+        src='/client-year-bg.png'
         alt=''
-        width={47}
-        height={60}
         aria-hidden='true'
-        className='pointer-events-none absolute -top-4 -left-3 w-8 max-w-none md:-top-5 md:-left-4 md:w-10'
+        fill
+        sizes='(min-width: 768px) 216px, 104px'
+        className='pointer-events-none object-contain'
       />
-      <div className='flex items-start gap-4 md:gap-6'>
-        <div className='space-y-0.5'>
-          <p className='text-[10px] font-semibold tracking-wide text-honey/70 md:text-xs'>
+      {/* Rotated to follow the tilt of the sheet in the image. */}
+      <dl className='absolute inset-0 -rotate-5 text-lemon'>
+        <div className='absolute top-[37%] left-[40%] -translate-x-1/2 text-center space-y-1'>
+          <dt className='leading-[1.4] text-[8px] lg:text-[17px] text-lemon font-medium font-display'>
             Client
-          </p>
-          <p className='font-display text-sm font-medium md:text-lg'>
+          </dt>
+          <dd className='text-[10px] lg:text-[22px] font-bold text-white'>
             {client}
-          </p>
+          </dd>
         </div>
-        <div className='space-y-0.5'>
-          <p className='text-[10px] font-semibold tracking-wide text-honey/70 md:text-xs'>
+        <div className='absolute top-[37%] left-[76%] -translate-x-1/2 text-center space-y-1'>
+          <dt className='leading-[1.4] text-[8px] lg:text-[17px] text-lemon font-medium font-display'>
             Year
-          </p>
-          <p className='font-display text-sm font-medium md:text-lg'>
+          </dt>
+          <dd className='text-[10px] lg:text-[22px] font-bold  text-white'>
             {year}
-          </p>
+          </dd>
         </div>
-      </div>
+      </dl>
     </div>
   );
 };

@@ -1,26 +1,5 @@
 import type { CaseStudySection, Project } from '@/types/project';
 
-const placeholderCaseStudy: CaseStudySection[] = [
-  {
-    label: 'Overview',
-    heading:
-      'lorem ipsum dolor sit amet consectetur adipiscing elit dolores repellendus exercitation consequat',
-    body: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Fuga et qui dolor puis maxime assumenda id animi eos aliqua omnis exercitation. Possimus et aliquip dolor nostrud ea adipiscing omnis. Et cupidatat sint accusamus cumque in. Adipiscing et eos qui occaecat deserunt.',
-  },
-  {
-    label: 'Challenge',
-    heading:
-      'lorem ipsum dolor sit amet consectetur adipiscing elit dolores repellendus exercitation consequat',
-    body: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Fuga et qui dolor puis maxime assumenda id animi eos aliqua omnis exercitation. Possimus et aliquip dolor nostrud ea adipiscing omnis. Et cupidatat sint accusamus cumque in. Adipiscing et eos qui occaecat deserunt.',
-  },
-  {
-    label: 'Solution',
-    heading:
-      'lorem ipsum dolor sit amet consectetur adipiscing elit dolores repellendus exercitation consequat',
-    body: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Fuga et qui dolor puis maxime assumenda id animi eos aliqua omnis exercitation. Possimus et aliquip dolor nostrud ea adipiscing omnis. Et cupidatat sint accusamus cumque in. Adipiscing et eos qui occaecat deserunt.',
-  },
-];
-
 const koyoCaseStudy: CaseStudySection[] = [
   {
     label: 'Overview',
@@ -149,6 +128,8 @@ export const projects: Project[] = [
     role: 'Mobile Engineer',
     featured: true,
     annotation: 'Food delivery can be fun too!',
+    client: 'Eatly',
+    year: '2026',
     links: {
       appStore:
         'https://apps.apple.com/ng/app/eatly-food-delivery/id6755495005',
@@ -180,6 +161,8 @@ export const projects: Project[] = [
     role: 'Mobile Engineer',
     featured: true,
     annotation: 'African culture is beautiful',
+    client: 'Koyo',
+    year: '2026',
     links: {
       appStore: 'https://apps.apple.com/ng/app/koyo/id6744146311',
       playStore:
@@ -289,7 +272,7 @@ export const projects: Project[] = [
     featured: false,
     annotation: 'Your website should be as fun as your mobile app',
     client: 'Eatly',
-    year: '2025',
+    year: '2026',
     links: {
       liveSite: 'https://www.eatly.io/',
     },
@@ -314,8 +297,8 @@ export const projects: Project[] = [
     role: 'Front-End Developer',
     featured: false,
     annotation: 'A specialist ghostwriting and content studio',
-    client: 'Legacy Inks',
-    year: '2025',
+    client: 'Legacy',
+    year: '2026',
     links: {},
     techStack: ['react', 'nextjs', 'typescript', 'tailwindcss'],
     images: {

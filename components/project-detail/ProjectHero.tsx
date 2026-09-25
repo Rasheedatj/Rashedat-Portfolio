@@ -3,6 +3,7 @@
 import { useGSAP } from '@gsap/react';
 import Image from 'next/image';
 import { useRef } from 'react';
+import ProjectClientTag from '@/components/project-detail/ProjectClientTag';
 import Container from '@/components/ui/Container';
 import type { Project } from '@/types/project';
 import { gsap, SplitText } from '@/lib/gsap';
@@ -14,6 +15,7 @@ type ProjectHeroProps = {
 const ProjectHero = ({ project }: ProjectHeroProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
+  const clientTagRef = useRef<HTMLDivElement>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -38,6 +40,16 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
             });
           },
         });
+
+        if (clientTagRef.current) {
+          gsap.from(clientTagRef.current, {
+            y: 40,
+            opacity: 0,
+            duration: 1.0,
+            delay: 0.2,
+            ease: 'power3.out',
+          });
+        }
 
         const wrapper = galleryRef.current;
         const track = trackRef.current;
@@ -67,13 +79,21 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
 
   return (
     <section ref={sectionRef} className='space-y-10 md:space-y-20'>
-      <Container className='flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between'>
+      <Container className='flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between'>
         <h1
           ref={headingRef}
           className='max-w-250 font-display text-2xl leading-[1.2] text-espresso md:text-[56px] md:leading-16.25 capitalize'
         >
           {project.headline}
         </h1>
+        {project.client && project.year && (
+          <ProjectClientTag
+            ref={clientTagRef}
+            client={project.client}
+            year={project.year}
+            className='-mt-10 -z-10  self-end md:mt-0 md:self-auto'
+          />
+        )}
       </Container>
       <Container>
         <Image

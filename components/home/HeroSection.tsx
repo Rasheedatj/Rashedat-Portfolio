@@ -32,10 +32,6 @@ const HeroSection = () => {
 
       const masks = [portraitMask, actionsMask];
 
-      // Each mask only needs to clip while ITS OWN tween is running - clear
-      // it the instant that tween completes, not when the whole sequence
-      // (heading/paragraph included) finishes, otherwise an early-finishing
-      // mask (the portrait) stays clipped while later steps still play.
       const clearMask = (mask: HTMLElement) =>
         mask.classList.remove('overflow-hidden');
       const revealOverflow = () => masks.forEach(clearMask);
@@ -131,8 +127,8 @@ const HeroSection = () => {
               className='max-w-132 text-[13px] leading-[1.9] font-semibold text-espresso md:text-lg'
             >
               Mobile Software Engineer With 4 Years Of Experience Building And
-              Shipping Production-Ready Applications With React Native, Expo And
-              TypeScript.
+              Shipping Production-Ready Cross-Platform Applications With React
+              Native, Expo And TypeScript.
             </p>
           </article>
 
