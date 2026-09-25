@@ -269,7 +269,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'legacy',
-    name: 'Legacy',
+    name: 'Legacy Inks',
     category: 'website',
     headline: 'Legacy Inks —  Helping A Content Studio Stay Visible',
     summary:

@@ -1,7 +1,7 @@
 'use client';
 
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import MoreProjectCard from '@/components/project-detail/MoreProjectCard';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -13,9 +13,24 @@ type MoreProjectsSectionProps = {
   projects: Project[];
 };
 
+const pickRandom = <T,>(items: T[], count: number) => {
+  const shuffled = [...items];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled.slice(0, count);
+};
+
 const MoreProjectsSection = ({ projects }: MoreProjectsSectionProps) => {
   const listRef = useRef<HTMLUListElement>(null);
-  const otherProjects = projects.slice(0, 2);
+  // Picked after mount: this page is statically rendered, so choosing during
+  // render would make the server and client HTML disagree.
+  const [otherProjects, setOtherProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    setOtherProjects(pickRandom(projects, 2));
+  }, [projects]);
 
   useGSAP(
     () => {
@@ -44,10 +59,10 @@ const MoreProjectsSection = ({ projects }: MoreProjectsSectionProps) => {
         });
       });
     },
-    { scope: listRef },
+    { scope: listRef, dependencies: [otherProjects] },
   );
 
-  if (!otherProjects.length) return null;
+  if (!projects.length) return null;
 
   return (
     <section className='mt-16 md:mt-27'>

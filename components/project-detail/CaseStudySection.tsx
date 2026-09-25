@@ -14,7 +14,6 @@ const DIM_ESPRESSO = 'rgba(51, 32, 26, 0.15)';
 
 const CaseStudySection = ({ section }: CaseStudySectionProps) => {
   const rootRef = useRef<HTMLDivElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
   const bodyRef = useRef<HTMLParagraphElement>(null);
 
   useGSAP(
